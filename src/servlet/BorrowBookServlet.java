@@ -41,10 +41,10 @@ public class BorrowBookServlet extends HttpServlet {
             int bookId = Integer.parseInt(bookIdStr);
             Book book = bookDAO.getBookById(bookId);
             if (book != null && book.isAvailable()) {
-                // Insert a borrow record
+        // Insert a borrow record
                 try (Connection conn = DBConnection.getConnection();
-                     PreparedStatement ps = conn.prepareStatement(
-                             "INSERT INTO borrowed_books (book_id, user_id, student_roll_no, borrow_date, due_date) VALUES (?,?,?,?,?)")) {
+             PreparedStatement ps = conn.prepareStatement(
+                 "INSERT INTO borrowed_books (book_id, user_id, student_roll_no, borrow_date, due_date) VALUES (?,?,?,?,?)")) {
                     LocalDate today = LocalDate.now();
                     LocalDate due = today.plusDays(14);
                     ps.setInt(1, bookId);
@@ -55,8 +55,12 @@ public class BorrowBookServlet extends HttpServlet {
                     ps.executeUpdate();
                 }
 
-                // Mark book unavailable
-                book.setAvailable(false);
+                // Decrement available_copies and recompute availability
+                Integer avail = book.getAvailableCopies();
+                if (avail == null) avail = 1;
+                avail = Math.max(0, avail - 1);
+                book.setAvailableCopies(avail);
+                book.setAvailable(avail > 0);
                 bookDAO.updateBook(book);
 
                 response.getWriter().println("Book borrowed successfully for Roll No: " + (roll != null ? roll : "N/A") + ". Due in 14 days.");

@@ -34,6 +34,8 @@ public class DatabaseInitListener implements ServletContextListener {
             "description TEXT, " +
             "cover_url VARCHAR(500), " +
             "location VARCHAR(100), " +
+            "total_copies INT DEFAULT 10, " +
+            "available_copies INT DEFAULT 10, " +
             "available BOOLEAN DEFAULT TRUE)");
                 // Ensure columns exist even if the table was created before these fields were added
 
@@ -45,6 +47,8 @@ public class DatabaseInitListener implements ServletContextListener {
                 st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS pages INT");
                 st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS location VARCHAR(100)");
                 st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS cover_url VARCHAR(500)");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS total_copies INT DEFAULT 10");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS available_copies INT DEFAULT 10");
                 // Seed data when table is empty
                 int count = 0;
                 try (ResultSet rs = st.executeQuery("SELECT COUNT(*) FROM books")) {
@@ -66,10 +70,10 @@ public class DatabaseInitListener implements ServletContextListener {
                         }
                     }
 
-                    // Top up with 1000 auto-generated diverse books
+            // Top up with 1000 auto-generated diverse books
                     try (PreparedStatement ps = conn.prepareStatement(
-                            "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) " +
-                                    "VALUES (?,?,?,?,?,?,?,?,?,?,?)")) {
+                "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, total_copies, available_copies, available) " +
+                    "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)")) {
                         String[] genres = new String[]{"Engineering","Medicine","Story","Action","Fantasy","Technology","Computer Science","History","Psychology","Business"};
                         String[] publishers = new String[]{"Helix House","CodeCraft","GreenLeaf","Sunfire","Addison-Wesley","Prentice Hall","North Star","Gridline","Mindframe","Founders Press"};
                         String[] shelves = new String[]{"A","B","C","D","E","F","G","H","I","J"};
@@ -86,7 +90,9 @@ public class DatabaseInitListener implements ServletContextListener {
                             String description = "Auto-seeded " + genre.toLowerCase(Locale.ROOT) + " volume " + i;
                             String coverUrl = "https://example.com/covers/" + slug(title) + ".jpg";
                             String location = "Shelf " + shelves[i % shelves.length] + ((i % 6) + 1);
-                            boolean available = i % 10 != 0; // 10% not available
+                            int totalCopies = 5 + (i % 16); // 5..20
+                            int availableCopies = (i % 4 == 0) ? 0 : Math.max(0, (totalCopies - (i % (totalCopies))));
+                            boolean available = availableCopies > 0;
                             String isbn = String.valueOf(baseIsbn + i);
 
                             int idx = 1;
@@ -100,6 +106,8 @@ public class DatabaseInitListener implements ServletContextListener {
                             ps.setString(idx++, description);
                             ps.setString(idx++, coverUrl);
                             ps.setString(idx++, location);
+                            ps.setInt(idx++, totalCopies);
+                            ps.setInt(idx++, availableCopies);
                             ps.setBoolean(idx++, available);
                             ps.addBatch();
 
@@ -111,6 +119,12 @@ public class DatabaseInitListener implements ServletContextListener {
                     }
                 }
                 st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS location VARCHAR(100)");
+                // Backfill copies columns for existing rows without values
+                try (Statement st2 = conn.createStatement()) {
+                    st2.executeUpdate("UPDATE books SET total_copies = COALESCE(total_copies, 10)");
+                    st2.executeUpdate("UPDATE books SET available_copies = CASE WHEN available_copies IS NULL THEN (CASE WHEN available=TRUE THEN total_copies ELSE 0 END) ELSE available_copies END");
+                    st2.executeUpdate("UPDATE books SET available = CASE WHEN available_copies > 0 THEN TRUE ELSE FALSE END");
+                }
 
                 st.executeUpdate("CREATE TABLE IF NOT EXISTS users (" +
                         "user_id INT AUTO_INCREMENT PRIMARY KEY, " +

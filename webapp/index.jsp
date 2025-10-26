@@ -25,13 +25,28 @@
             <p class="subtle">New here? <a href="register.jsp">Create an account</a>. Already have one? <a href="login.jsp">Login</a>.</p>
         <% } %>
 
-        <div style="height:8px"></div>
-        <ul>
-            <li><a href="search.jsp">Search for a Book</a></li>
-            <li><a href="borrow.jsp">Borrow a Book</a></li>
-            <li><a href="return.jsp">Return a Book</a></li>
-            <li><a href="renew.jsp">Renew a Book</a></li>
-        </ul>
+        <div class="features">
+            <div class="card">
+                <h3>Search</h3>
+                <p>Find books by title or author.</p>
+                <a class="btn" href="<%= request.getContextPath() %>/search.jsp">Open Search</a>
+            </div>
+            <div class="card">
+                <h3>Borrow</h3>
+                <p>Borrow an available book using ID and roll no.</p>
+                <a class="btn" href="<%= request.getContextPath() %>/borrow.jsp">Borrow Book</a>
+            </div>
+            <div class="card">
+                <h3>Return</h3>
+                <p>Return a borrowed book by ID.</p>
+                <a class="btn" href="<%= request.getContextPath() %>/return.jsp">Return Book</a>
+            </div>
+            <div class="card">
+                <h3>Renew</h3>
+                <p>Extend your borrowing period.</p>
+                <a class="btn" href="<%= request.getContextPath() %>/renew.jsp">Renew Book</a>
+            </div>
+        </div>
 
         <%
             if (user != null && "admin".equals(user.getRole())) {

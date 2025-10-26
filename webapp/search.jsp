@@ -29,7 +29,7 @@
         %>
             <div style="height:12px"></div>
             <p class="subtle">
-                <%= (featured != null && featured) ? "Showing some random books" : (q != null ? ("Results for '" + q + "'") : "") %>
+                <%= (q != null && !q.trim().isEmpty()) ? ("Results for '" + q + "'") : "" %>
             </p>
             <table class="table">
                 <tr>
@@ -46,7 +46,7 @@
                         <td><%= book.getId() %></td>
                         <td><%= book.getTitle() %></td>
                         <td><%= book.getAuthor() %></td>
-                        <td><%= book.isAvailable() ? 1 : 0 %></td>
+                        <td><%= (book.getAvailableCopies() != null ? book.getAvailableCopies() : (book.isAvailable() ? 1 : 0)) %></td>
                         <td>
                             <% if (book.isAvailable()) { %>
                                 <form action="<%= request.getContextPath() %>/borrow" method="post" class="inline">

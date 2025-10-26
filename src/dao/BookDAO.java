@@ -28,8 +28,10 @@ public class BookDAO {
                 String description = rs.getString("description");
                 String coverUrl = rs.getString("cover_url");
                 String location = rs.getString("location");
+                Integer totalCopies = (Integer) rs.getObject("total_copies");
+                Integer availableCopies = (Integer) rs.getObject("available_copies");
                 boolean available = rs.getBoolean("available");
-                books.add(new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, available));
+                books.add(new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, totalCopies, availableCopies, available));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -57,8 +59,10 @@ public class BookDAO {
                 String description = rs.getString("description");
                 String coverUrl = rs.getString("cover_url");
                 String location = rs.getString("location");
+                Integer totalCopies = (Integer) rs.getObject("total_copies");
+                Integer availableCopies = (Integer) rs.getObject("available_copies");
                 boolean available = rs.getBoolean("available");
-                book = new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, available);
+                book = new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, totalCopies, availableCopies, available);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -67,7 +71,7 @@ public class BookDAO {
     }
 
     public void addBook(Book book) {
-        String sql = "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, total_copies, available_copies, available) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, book.getTitle());
@@ -80,7 +84,9 @@ public class BookDAO {
             pstmt.setString(8, book.getDescription());
             pstmt.setString(9, book.getCoverUrl());
             pstmt.setString(10, book.getLocation());
-            pstmt.setBoolean(11, book.isAvailable());
+            if (book.getTotalCopies() != null) pstmt.setInt(11, book.getTotalCopies()); else pstmt.setNull(11, java.sql.Types.INTEGER);
+            if (book.getAvailableCopies() != null) pstmt.setInt(12, book.getAvailableCopies()); else pstmt.setNull(12, java.sql.Types.INTEGER);
+            pstmt.setBoolean(13, book.isAvailable());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -88,7 +94,7 @@ public class BookDAO {
     }
 
     public void updateBook(Book book) {
-        String sql = "UPDATE books SET title = ?, author = ?, isbn = ?, genre = ?, publisher = ?, published_year = ?, pages = ?, description = ?, cover_url = ?, location = ?, available = ? WHERE id = ?";
+        String sql = "UPDATE books SET title = ?, author = ?, isbn = ?, genre = ?, publisher = ?, published_year = ?, pages = ?, description = ?, cover_url = ?, location = ?, total_copies = ?, available_copies = ?, available = ? WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, book.getTitle());
@@ -101,8 +107,10 @@ public class BookDAO {
             pstmt.setString(8, book.getDescription());
             pstmt.setString(9, book.getCoverUrl());
             pstmt.setString(10, book.getLocation());
-            pstmt.setBoolean(11, book.isAvailable());
-            pstmt.setInt(12, book.getId());
+            if (book.getTotalCopies() != null) pstmt.setInt(11, book.getTotalCopies()); else pstmt.setNull(11, java.sql.Types.INTEGER);
+            if (book.getAvailableCopies() != null) pstmt.setInt(12, book.getAvailableCopies()); else pstmt.setNull(12, java.sql.Types.INTEGER);
+            pstmt.setBoolean(13, book.isAvailable());
+            pstmt.setInt(14, book.getId());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -145,7 +153,9 @@ public class BookDAO {
                 String coverUrl = rs.getString("cover_url");
                 String location = rs.getString("location");
                 boolean available = rs.getBoolean("available");
-                books.add(new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, available));
+                Integer totalCopies = (Integer) rs.getObject("total_copies");
+                Integer availableCopies = (Integer) rs.getObject("available_copies");
+                books.add(new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, totalCopies, availableCopies, available));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -175,7 +185,9 @@ public class BookDAO {
                 String coverUrl = rs.getString("cover_url");
                 String location = rs.getString("location");
                 boolean available = rs.getBoolean("available");
-                books.add(new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, available));
+                Integer totalCopies = (Integer) rs.getObject("total_copies");
+                Integer availableCopies = (Integer) rs.getObject("available_copies");
+                books.add(new Book(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, totalCopies, availableCopies, available));
             }
         } catch (SQLException e) {
             e.printStackTrace();

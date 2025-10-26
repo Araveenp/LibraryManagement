@@ -12,6 +12,8 @@ public class Book {
     private String description;
     private String coverUrl;
     private String location;
+    private Integer totalCopies;
+    private Integer availableCopies;
     private boolean available;
 
     public Book() {
@@ -39,6 +41,14 @@ public class Book {
         this.coverUrl = coverUrl;
         this.location = location;
         this.available = available;
+    }
+
+    public Book(int id, String title, String author, String isbn, String genre, String publisher,
+                Integer publishedYear, Integer pages, String description, String coverUrl,
+                String location, Integer totalCopies, Integer availableCopies, boolean available) {
+        this(id, title, author, isbn, genre, publisher, publishedYear, pages, description, coverUrl, location, available);
+        this.totalCopies = totalCopies;
+        this.availableCopies = availableCopies;
     }
 
     public int getId() {
@@ -96,4 +106,10 @@ public class Book {
 
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
+
+    public Integer getTotalCopies() { return totalCopies; }
+    public void setTotalCopies(Integer totalCopies) { this.totalCopies = totalCopies; }
+
+    public Integer getAvailableCopies() { return availableCopies; }
+    public void setAvailableCopies(Integer availableCopies) { this.availableCopies = availableCopies; }
 }

@@ -22,16 +22,15 @@ public class SearchBookServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String query = request.getParameter("query");
-        List<Book> books;
-        if (query == null || query.trim().isEmpty()) {
-            books = bookDAO.getRandomBooks(12);
-            request.setAttribute("featured", true);
-        } else {
-            books = bookDAO.searchBooks(query);
+        if (query != null && !query.trim().isEmpty()) {
+            List<Book> books = bookDAO.searchBooks(query);
+            request.setAttribute("books", books);
             request.setAttribute("featured", false);
             request.setAttribute("q", query);
+        } else {
+            request.setAttribute("books", null);
+            request.setAttribute("featured", false);
         }
-        request.setAttribute("books", books);
         request.getRequestDispatcher("search.jsp").forward(request, response);
     }
 }

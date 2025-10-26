@@ -40,8 +40,14 @@ public class ReturnBookServlet extends HttpServlet {
                     ps.executeUpdate();
                 }
 
-                // Mark book available
-                book.setAvailable(true);
+                // Increment available_copies (up to total_copies) and update availability
+                Integer avail = book.getAvailableCopies();
+                Integer total = book.getTotalCopies();
+                if (avail == null) avail = 0;
+                if (total == null) total = Math.max(1, avail + 1);
+                avail = Math.min(total, avail + 1);
+                book.setAvailableCopies(avail);
+                book.setAvailable(avail > 0);
                 bookDAO.updateBook(book);
                 response.getWriter().println("Book returned successfully!");
             } else {
