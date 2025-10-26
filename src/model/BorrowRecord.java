@@ -7,6 +7,7 @@ public class BorrowRecord {
     private int bookId;
     private String title;
     private String author;
+    private Integer quantity;
     private String studentRollNo;
     private Integer userId;
     private String username;
@@ -25,6 +26,9 @@ public class BorrowRecord {
 
     public String getAuthor() { return author; }
     public void setAuthor(String author) { this.author = author; }
+
+    public Integer getQuantity() { return quantity; }
+    public void setQuantity(Integer quantity) { this.quantity = quantity; }
 
     public String getStudentRollNo() { return studentRollNo; }
     public void setStudentRollNo(String studentRollNo) { this.studentRollNo = studentRollNo; }

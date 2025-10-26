@@ -115,8 +115,10 @@
                     <th>Book ID</th>
                     <th>Title</th>
                     <th>Author</th>
+                    <th>Qty</th>
                     <th>Borrow Date</th>
                     <th>Due Date</th>
+                    <th>Actions</th>
                 </tr>
                 <% for (BorrowRecord r : loans) { %>
                 <tr>
@@ -124,8 +126,23 @@
                     <td><%= r.getBookId() %></td>
                     <td><%= r.getTitle() %></td>
                     <td><%= r.getAuthor() %></td>
+                    <td><%= r.getQuantity() == null ? 1 : r.getQuantity() %></td>
                     <td><%= r.getBorrowDate() %></td>
                     <td><%= r.getDueDate() %></td>
+                    <td>
+                        <form action="<%= request.getContextPath() %>/return" method="post" style="display:inline">
+                            <input type="hidden" name="bookId" value="<%= r.getBookId() %>">
+                            <input type="hidden" name="studentRollNo" value="<%= r.getStudentRollNo() %>">
+                            <input type="hidden" name="quantity" value="1">
+                            <button class="btn" type="submit">Return 1</button>
+                        </form>
+                        <form action="<%= request.getContextPath() %>/return" method="post" style="display:inline;margin-left:6px">
+                            <input type="hidden" name="bookId" value="<%= r.getBookId() %>">
+                            <input type="hidden" name="studentRollNo" value="<%= r.getStudentRollNo() %>">
+                            <input type="hidden" name="quantity" value="<%= r.getQuantity() == null ? 1 : r.getQuantity() %>">
+                            <button class="btn danger" type="submit">Return All</button>
+                        </form>
+                    </td>
                 </tr>
                 <% } %>
             </table>

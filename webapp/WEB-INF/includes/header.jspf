@@ -9,6 +9,7 @@
     <a href="<%= request.getContextPath() %>/renew.jsp">Renew</a>
     <% if (navUser != null && "admin".equals(navUser.getRole())) { %>
       <a href="<%= request.getContextPath() %>/admin.jsp">Admin</a>
+      <a href="<%= request.getContextPath() %>/admin/loans">Loans</a>
     <% } %>
   </div>
   <div class="auth">
