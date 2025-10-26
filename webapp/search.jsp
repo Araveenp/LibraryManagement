@@ -36,7 +36,8 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>Available</th>
+                    <th>Available (count)</th>
+                    <th>Actions</th>
                 </tr>
                 <%
                     for (Book book : books) {
@@ -45,7 +46,18 @@
                         <td><%= book.getId() %></td>
                         <td><%= book.getTitle() %></td>
                         <td><%= book.getAuthor() %></td>
-                        <td><%= book.isAvailable() ? "Yes" : "No" %></td>
+                        <td><%= book.isAvailable() ? 1 : 0 %></td>
+                        <td>
+                            <% if (book.isAvailable()) { %>
+                                <form action="<%= request.getContextPath() %>/borrow" method="post" class="inline">
+                                    <input type="hidden" name="bookId" value="<%= book.getId() %>" />
+                                    <input type="text" name="studentRollNo" placeholder="Student Roll No" required style="width:160px"/>
+                                    <button type="submit" class="btn">Borrow</button>
+                                </form>
+                            <% } else { %>
+                                <span class="subtle">Not available</span>
+                            <% } %>
+                        </td>
                     </tr>
                 <%
                     }

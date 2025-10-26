@@ -120,13 +120,15 @@ public class DatabaseInitListener implements ServletContextListener {
                         "email VARCHAR(100) UNIQUE, " +
                         "role VARCHAR(20) DEFAULT 'user')");
 
-                st.executeUpdate("CREATE TABLE IF NOT EXISTS borrowed_books (" +
-                        "borrow_id INT AUTO_INCREMENT PRIMARY KEY, " +
-                        "book_id INT NOT NULL, " +
-                        "user_id INT NOT NULL, " +
-                        "borrow_date DATE NOT NULL, " +
-                        "due_date DATE NOT NULL, " +
-                        "return_date DATE)");
+        st.executeUpdate("CREATE TABLE IF NOT EXISTS borrowed_books (" +
+            "borrow_id INT AUTO_INCREMENT PRIMARY KEY, " +
+            "book_id INT NOT NULL, " +
+            "user_id INT NOT NULL, " +
+            "student_roll_no VARCHAR(50), " +
+            "borrow_date DATE NOT NULL, " +
+            "due_date DATE NOT NULL, " +
+            "return_date DATE)");
+        st.executeUpdate("ALTER TABLE borrowed_books ADD COLUMN IF NOT EXISTS student_roll_no VARCHAR(50)");
             }
         } catch (SQLException e) {
             e.printStackTrace();

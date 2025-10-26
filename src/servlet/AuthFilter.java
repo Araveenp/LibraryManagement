@@ -23,14 +23,15 @@ public class AuthFilter implements Filter {
         String path = uri.substring(contextPath.length());
 
         // Public endpoints and assets
-        boolean isAsset = path.startsWith("/assets/");
-        boolean isAuth = path.equals("/login") || path.equals("/register");
-        boolean isAuthPage = path.equals("/login.jsp") || path.equals("/register.jsp");
-        boolean isRoot = path.equals("") || path.equals("/");
+    boolean isAsset = path.startsWith("/assets/");
+    boolean isAuth = path.equals("/login") || path.equals("/register");
+    boolean isAuthPage = path.equals("/login.jsp") || path.equals("/register.jsp");
+    boolean isRoot = path.equals("") || path.equals("/");
+    boolean isHome = path.equals("/index.jsp");
 
         User user = (session != null) ? (User) session.getAttribute("user") : null;
 
-        if (isAsset || isAuth || isAuthPage || isRoot) {
+        if (isAsset || isAuth || isAuthPage || isRoot || isHome) {
             chain.doFilter(request, response);
             return;
         }
