@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: library-management
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://YOUR_HOST:3306/library_db?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - key: DB_USER
+        value: YOUR_DB_USER
+      - key: DB_PASSWORD
+        value: YOUR_DB_PASSWORD
