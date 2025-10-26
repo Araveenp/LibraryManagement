@@ -3,9 +3,15 @@ package util;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Locale;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 
 @WebListener
 public class DatabaseInitListener implements ServletContextListener {
@@ -20,7 +26,91 @@ public class DatabaseInitListener implements ServletContextListener {
                         "id INT AUTO_INCREMENT PRIMARY KEY, " +
                         "title VARCHAR(255), " +
                         "author VARCHAR(255), " +
-                        "available BOOLEAN DEFAULT TRUE)");
+            "isbn VARCHAR(20), " +
+            "genre VARCHAR(100), " +
+            "publisher VARCHAR(100), " +
+            "published_year INT, " +
+            "pages INT, " +
+            "description TEXT, " +
+            "cover_url VARCHAR(500), " +
+            "location VARCHAR(100), " +
+            "available BOOLEAN DEFAULT TRUE)");
+                // Ensure columns exist even if the table was created before these fields were added
+
+                // Ensure columns exist even if the table was created before these fields were added
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS isbn VARCHAR(20)");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS genre VARCHAR(100)");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS publisher VARCHAR(100)");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS published_year INT");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS pages INT");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS location VARCHAR(100)");
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS cover_url VARCHAR(500)");
+                // Seed data when table is empty
+                int count = 0;
+                try (ResultSet rs = st.executeQuery("SELECT COUNT(*) FROM books")) {
+                    if (rs.next()) count = rs.getInt(1);
+                }
+
+                if (count == 0) {
+                    // If a CSV file exists at repo root, import it first
+                    Path csvPath = Paths.get("books.csv");
+                    if (Files.exists(csvPath)) {
+                        String header = "title,author,isbn,genre,publisher,published_year,pages,description,cover_url,location,available";
+                        String csvInsert = "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) " +
+                                "SELECT title, author, isbn, genre, publisher, CAST(published_year AS INT), CAST(pages AS INT), description, cover_url, location, " +
+                                "CASE WHEN LOWER(available)='true' THEN TRUE ELSE FALSE END FROM CSVREAD('" + csvPath.toString().replace("\\", "/") + "', '" + header + "')";
+                        try {
+                            st.executeUpdate(csvInsert);
+                        } catch (SQLException ignore) {
+                            // If CSVREAD fails (e.g., path issues), continue with programmatic seed
+                        }
+                    }
+
+                    // Top up with 1000 auto-generated diverse books
+                    try (PreparedStatement ps = conn.prepareStatement(
+                            "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) " +
+                                    "VALUES (?,?,?,?,?,?,?,?,?,?,?)")) {
+                        String[] genres = new String[]{"Engineering","Medicine","Story","Action","Fantasy","Technology","Computer Science","History","Psychology","Business"};
+                        String[] publishers = new String[]{"Helix House","CodeCraft","GreenLeaf","Sunfire","Addison-Wesley","Prentice Hall","North Star","Gridline","Mindframe","Founders Press"};
+                        String[] shelves = new String[]{"A","B","C","D","E","F","G","H","I","J"};
+                        int baseYear = 1995;
+                        long baseIsbn = 9781000000000L;
+
+                        for (int i = 1; i <= 1000; i++) {
+                            String genre = genres[i % genres.length];
+                            String title = makeTitle(genre, i);
+                            String author = "Author " + genre.charAt(0) + " " + i;
+                            String publisher = publishers[(i * 3) % publishers.length];
+                            int year = baseYear + (i % 30);
+                            int pages = 160 + (i * 7 % 540);
+                            String description = "Auto-seeded " + genre.toLowerCase(Locale.ROOT) + " volume " + i;
+                            String coverUrl = "https://example.com/covers/" + slug(title) + ".jpg";
+                            String location = "Shelf " + shelves[i % shelves.length] + ((i % 6) + 1);
+                            boolean available = i % 10 != 0; // 10% not available
+                            String isbn = String.valueOf(baseIsbn + i);
+
+                            int idx = 1;
+                            ps.setString(idx++, title);
+                            ps.setString(idx++, author);
+                            ps.setString(idx++, isbn);
+                            ps.setString(idx++, genre);
+                            ps.setString(idx++, publisher);
+                            ps.setInt(idx++, year);
+                            ps.setInt(idx++, pages);
+                            ps.setString(idx++, description);
+                            ps.setString(idx++, coverUrl);
+                            ps.setString(idx++, location);
+                            ps.setBoolean(idx++, available);
+                            ps.addBatch();
+
+                            if (i % 200 == 0) {
+                                ps.executeBatch();
+                            }
+                        }
+                        ps.executeBatch();
+                    }
+                }
+                st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS location VARCHAR(100)");
 
                 st.executeUpdate("CREATE TABLE IF NOT EXISTS users (" +
                         "user_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -41,5 +131,38 @@ public class DatabaseInitListener implements ServletContextListener {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private static String makeTitle(String genre, int i) {
+        switch (genre) {
+            case "Engineering":
+                return "Engineering Handbook Vol " + i;
+            case "Medicine":
+                return "MBBS Essentials " + i;
+            case "Story":
+                return "Story Collection " + i;
+            case "Action":
+                return "Action Chronicles " + i;
+            case "Fantasy":
+                return "Fantasy Realms " + i;
+            case "Technology":
+                return "Tech Insights " + i;
+            case "Computer Science":
+                return "Computer Science Guide " + i;
+            case "History":
+                return "Historical Perspectives " + i;
+            case "Psychology":
+                return "Psychology Insights " + i;
+            case "Business":
+                return "Business Strategies " + i;
+            default:
+                return genre + " Volume " + i;
+        }
+    }
+
+    private static String slug(String s) {
+        return s.toLowerCase(Locale.ROOT)
+                .replaceAll("[^a-z0-9]+", "-")
+                .replaceAll("(^-|-$)", "");
     }
 }

@@ -20,14 +20,18 @@ public class RegisterServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String fullName = request.getParameter("fullName");
-        String email = request.getParameter("email");
+        String username = safeTrim(request.getParameter("username"));
+        String password = safeTrim(request.getParameter("password"));
+        String fullName = safeTrim(request.getParameter("fullName"));
+        String email = safeTrim(request.getParameter("email"));
 
         User newUser = new User(0, username, password, fullName, email, "user");
         userDAO.addUser(newUser);
 
-        response.sendRedirect("login.jsp");
+        response.sendRedirect(request.getContextPath() + "/login.jsp");
+    }
+
+    private String safeTrim(String s) {
+        return s == null ? null : s.trim();
     }
 }

@@ -1,0 +1,22 @@
+<% model.User navUser = (model.User) session.getAttribute("user"); %>
+<div class="nav">
+  <div class="brand"><a href="<%= request.getContextPath() %>/index.jsp">Library</a></div>
+  <div class="links">
+    <a href="<%= request.getContextPath() %>/index.jsp">Home</a>
+    <a href="<%= request.getContextPath() %>/search.jsp">Search</a>
+    <a href="<%= request.getContextPath() %>/borrow.jsp">Borrow</a>
+    <a href="<%= request.getContextPath() %>/return.jsp">Return</a>
+    <a href="<%= request.getContextPath() %>/renew.jsp">Renew</a>
+    <% if (navUser != null && "admin".equals(navUser.getRole())) { %>
+      <a href="<%= request.getContextPath() %>/admin.jsp">Admin</a>
+    <% } %>
+  </div>
+  <div class="auth">
+    <% if (navUser != null) { %>
+      <a class="primary" href="<%= request.getContextPath() %>/logout">Logout</a>
+    <% } else { %>
+      <a href="<%= request.getContextPath() %>/login.jsp">Login</a>
+      <a class="primary" href="<%= request.getContextPath() %>/register.jsp">Register</a>
+    <% } %>
+  </div>
+</div>

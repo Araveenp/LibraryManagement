@@ -1,30 +1,46 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.User" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Library Management System</title>
-</head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Library Management System</title>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/styles.css" />
+    </head>
 <body>
-    <h1>Welcome to the Library Management System</h1>
+<div class="container">
+        <%@ include file="/WEB-INF/includes/header.jspf" %>
 
-    <%
-        User user = (User) session.getAttribute("user");
-        if (user != null) {
-    %>
-        <p>Hello, <%= user.getFullName() %>! (<a href="logout">Logout</a>)</p>
-    <% } else { %>
-        <p><a href="login.jsp">Login</a> | <a href="register.jsp">Register</a></p>
-    <% } %>
+    <div class="panel">
+        <h1 class="heading">Welcome to the Library Management System</h1>
+        <p class="subtle">Search, borrow, return, and manage books with a clean, modern interface.</p>
 
-    <h3><a href="search.jsp">Search for a Book</a></h3>
-    <h3><a href="borrow.jsp">Borrow a Book</a></h3>
-    <h3><a href="return.jsp">Return a Book</a></h3>
-    <h3><a href="renew.jsp">Renew a Book</a></h3>
+        <%
+            User user = (User) session.getAttribute("user");
+            if (user != null) {
+        %>
+            <p class="subtle">Hello, <strong><%= user.getFullName() %></strong>!</p>
+        <% } else { %>
+            <p class="subtle">New here? <a href="register.jsp">Create an account</a>. Already have one? <a href="login.jsp">Login</a>.</p>
+        <% } %>
 
-    <%
-        if (user != null && "admin".equals(user.getRole())) {
-    %>
-        <h3><a href="admin.jsp">Admin Panel</a></h3>
-    <% } %>
+        <div style="height:8px"></div>
+        <ul>
+            <li><a href="search.jsp">Search for a Book</a></li>
+            <li><a href="borrow.jsp">Borrow a Book</a></li>
+            <li><a href="return.jsp">Return a Book</a></li>
+            <li><a href="renew.jsp">Renew a Book</a></li>
+        </ul>
+
+        <%
+            if (user != null && "admin".equals(user.getRole())) {
+        %>
+            <p><a href="admin.jsp">Go to Admin Panel</a></p>
+        <% } %>
+    </div>
+
+        <%@ include file="/WEB-INF/includes/footer.jspf" %>
+</div>
 </body>
 </html>

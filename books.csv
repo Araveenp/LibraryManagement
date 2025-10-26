@@ -1,0 +1,308 @@
+title,author,isbn,genre,publisher,published_year,pages,description,cover_url,location,available
+Galactic Horizons,Aria K. Stone,9780000000001,Science Fiction,Stellar House,2015,384,Exploration of distant worlds,https://example.com/covers/galactic_horizons.jpg,Shelf A1,true
+The Quantum Bridge,Leo Faraday,9780000000002,Science,Nova Press,2018,320,Popular overview of quantum tech,https://example.com/covers/quantum_bridge.jpg,Shelf S1,true
+Mystery at Raven Hill,Clara Doyle,9780000000003,Mystery,Black Lantern,2012,276,Detective unravels a small town secret,https://example.com/covers/raven_hill.jpg,Shelf M2,true
+Whispers of the Forest,Ella Greenwood,9780000000004,Fantasy,Emerald Ink,2017,410,Magic awakens in ancient woods,https://example.com/covers/whispers_forest.jpg,Shelf F3,true
+Culinary Journeys,Maria Rossi,9780000000005,Cookbook,Savory Pages,2020,240,Recipes inspired by travel,https://example.com/covers/culinary_journeys.jpg,Shelf C1,true
+Edge of Algorithms,Neel Batra,9780000000006,Technology,CodeCraft,2021,352,Modern algorithms explained,https://example.com/covers/edge_algorithms.jpg,Shelf T1,true
+The Art of Minimal Living,Hana Kim,9780000000007,Self Help,LightPath,2019,208,Guide to simple intentional life,https://example.com/covers/minimal_living.jpg,Shelf SH1,true
+Finance Made Simple,Jordan Blake,9780000000008,Business,LedgerWorks,2016,288,Personal finance for everyone,https://example.com/covers/finance_simple.jpg,Shelf B1,true
+Running Strong,Peter Novak,9780000000009,Health,Stride House,2014,224,Training for distance runners,https://example.com/covers/running_strong.jpg,Shelf H1,true
+Poems of the Sea,Lina Moreno,9780000000010,Poetry,BlueWave,2011,160,Contemporary ocean themed poems,https://example.com/covers/poems_sea.jpg,Shelf P1,true
+A Brief History of Numbers,Ivan Petrov,9780000000011,Math,NumberLine,2013,300,How numbers shaped civilization,https://example.com/covers/history_numbers.jpg,Shelf MA1,true
+Designing User Experiences,Sofia Alvarez,9780000000012,Design,Canvas Press,2022,344,Practical UX methods and case studies,https://example.com/covers/designing_ux.jpg,Shelf D1,true
+The Startup Playbook,Ryan Patel,9780000000013,Entrepreneurship,Founders Press,2018,296,From idea to product market fit,https://example.com/covers/startup_playbook.jpg,Shelf B2,true
+Rivers and Mountains,Noah Greene,9780000000014,Nature,WildTrail,2010,264,Essays on landscapes and ecology,https://example.com/covers/rivers_mountains.jpg,Shelf N1,true
+Hidden Codes,Amelia Zhou,9780000000015,Thriller,Redline Press,2019,360,Cryptographer on the run,https://example.com/covers/hidden_codes.jpg,Shelf TH1,true
+Hearts in Winter,Grace Bell,9780000000016,Romance,SilverLeaf,2015,312,Love rekindled in a mountain town,https://example.com/covers/hearts_winter.jpg,Shelf R1,true
+The Mindful Leader,Kai Nakamura,9780000000017,Leadership,North Star,2020,280,Mindfulness for effective leadership,https://example.com/covers/mindful_leader.jpg,Shelf B3,true
+City of Brass and Smoke,Adir Khan,9780000000018,Fantasy,Sunfire,2016,448,Adventure in a steampunk city,https://example.com/covers/brass_smoke.jpg,Shelf F4,true
+Data Storytelling,Lauren Chen,9780000000019,Data,Plotline,2021,256,Communicating insights with data,https://example.com/covers/data_storytelling.jpg,Shelf T2,true
+The Silk Road Revisited,Omar Rahman,9780000000020,History,EastWest,2012,336,Trade routes that connected worlds,https://example.com/covers/silk_road.jpg,Shelf HI1,true
+Journey to the Poles,Natalie Frost,9780000000021,Travel,Compass,2013,280,Expeditions to Arctic and Antarctic,https://example.com/covers/journey_poles.jpg,Shelf TR1,true
+Wildlife of the Savannah,Keisha Dlamini,9780000000022,Animals,Safari Print,2017,220,Field guide to African savannah,https://example.com/covers/wildlife_savannah.jpg,Shelf N2,true
+String Theory Unraveled,Dr. Ethan Park,9780000000023,Physics,Helix House,2014,340,Accessible look at string theory,https://example.com/covers/string_theory.jpg,Shelf S2,true
+The Renaissance Makers,Beatrice Conte,9780000000024,Art,Atelier,2011,300,Artists who changed history,https://example.com/covers/renaissance_makers.jpg,Shelf AR1,true
+Forest School Handbook,Lucy Shaw,9780000000025,Education,GreenLeaf,2020,216,Outdoor learning for kids,https://example.com/covers/forest_school.jpg,Shelf ED1,true
+SQL for Everyone,Tariq Mahmood,9780000000026,Technology,CodeCraft,2019,330,Hands on SQL from basics to joins,https://example.com/covers/sql_everyone.jpg,Shelf T3,true
+Gardening on Balconies,Irene Novak,9780000000027,Gardening,Leaf & Soil,2016,180,Urban gardening in small spaces,https://example.com/covers/gardening_balconies.jpg,Shelf G1,true
+Under the Crimson Sky,Valeria Rossi,9780000000028,Historical Fiction,Maple & Ash,2018,400,Family saga through wartime,https://example.com/covers/crimson_sky.jpg,Shelf HF1,true
+The Psychology of Habits,Dr. Maya Voss,9780000000029,Psychology,Mindframe,2015,272,Building and breaking habits,https://example.com/covers/psych_habits.jpg,Shelf PS1,true
+Clean Architecture in Practice,Jon Harper,9780000000030,Programming,CodeCraft,2022,360,Architecting maintainable systems,https://example.com/covers/clean_arch_practice.jpg,Shelf T4,true
+Sourdough Basics,Elena Petrova,9780000000031,Cookbook,Savory Pages,2021,160,Beginner guide to artisan bread,https://example.com/covers/sourdough_basics.jpg,Shelf C2,true
+The Poetry of Light,Saeed Rahimi,9780000000032,Poetry,BlueWave,2019,144,Minimalist poems on light and time,https://example.com/covers/poetry_light.jpg,Shelf P2,true
+Intro to Game Theory,Oliver Quinn,9780000000033,Economics,Equilibrium,2013,288,Strategies and payoffs explained,https://example.com/covers/game_theory.jpg,Shelf EC1,true
+Modern Calligraphy,Harper Lin,9780000000034,Art,Atelier,2017,200,Lettering techniques for creators,https://example.com/covers/modern_calligraphy.jpg,Shelf AR2,true
+The Healthy Gut Guide,Ava Singh,9780000000035,Health,Vitality,2018,256,Digestive health and nutrition,https://example.com/covers/healthy_gut.jpg,Shelf H2,true
+Secrets of the Old Manor,Clive Barrett,9780000000036,Horror,Midnight Ink,2014,290,Haunting tale in a coastal town,https://example.com/covers/old_manor.jpg,Shelf HO1,true
+Meditations at Dawn,Anika Bose,9780000000037,Spirituality,Shanti Press,2012,180,Morning practices for presence,https://example.com/covers/meditations_dawn.jpg,Shelf SP1,true
+The Language of Flowers,June Hart,9780000000038,Reference,Index Press,2011,220,Meanings of blooms and herbs,https://example.com/covers/language_flowers.jpg,Shelf REF1,true
+Raising Creative Kids,Tomoko Arai,9780000000039,Parenting,Little Steps,2016,240,Nurturing creativity at home,https://example.com/covers/creative_kids.jpg,Shelf PAR1,true
+Winning the Derby,Marcus Cole,9780000000040,Sports,Champions,2015,224,Training and tactics for racing,https://example.com/covers/winning_derby.jpg,Shelf SP2,true
+Cloud Atlas of Patterns,Rina Ishikawa,9780000000041,Nature,WildTrail,2021,192,Guide to reading skies,https://example.com/covers/cloud_atlas.jpg,Shelf N3,true
+Oceanography 101,Prof. Daniel Cruz,9780000000042,Science,Helix House,2013,312,Intro to ocean science,https://example.com/covers/oceanography_101.jpg,Shelf S3,true
+The Artisan Woodworker,Marco Vitale,9780000000043,DIY,CraftForge,2018,264,Projects and techniques in wood,https://example.com/covers/artisan_woodworker.jpg,Shelf DIY1,true
+Tales from the Bazaar,Farah Qadir,9780000000044,Short Stories,Sunfire,2019,208,Stories from a bustling market,https://example.com/covers/bazaar_tales.jpg,Shelf SS1,true
+Digital Photography Mastery,Elio Romano,9780000000045,Photography,LensLab,2016,320,From exposure to editing,https://example.com/covers/photo_mastery.jpg,Shelf PH1,true
+Astronomy for Beginners,Sasha Lebedev,9780000000046,Science,Helix House,2012,280,Night sky observation guide,https://example.com/covers/astronomy_beginners.jpg,Shelf S4,true
+The Ethical Hacker Path,Ines Duarte,9780000000047,Technology,CodeCraft,2020,340,Security basics and labs,https://example.com/covers/ethical_hacker.jpg,Shelf T5,true
+Urban Planning Today,Diego Martinez,9780000000048,Urban Studies,Gridline,2014,296,Designing livable cities,https://example.com/covers/urban_planning.jpg,Shelf U1,true
+Pilates at Home,Sophie Grant,9780000000049,Fitness,Vitality,2017,176,Core workouts without equipment,https://example.com/covers/pilates_home.jpg,Shelf H3,true
+The Painter's Eye,Louise Pelletier,9780000000050,Art,Atelier,2015,240,Seeing like a painter,https://example.com/covers/painters_eye.jpg,Shelf AR3,true
+Legacy of Ashes,Rey Morales,9780000000051,Fantasy,Emerald Ink,2022,520,Empire in turmoil and magic,https://example.com/covers/legacy_ashes.jpg,Shelf F5,true
+Blockchain Explained,Rahul Mehta,9780000000052,Technology,LedgerWorks,2018,256,Concepts and applications,https://example.com/covers/blockchain_explained.jpg,Shelf T6,true
+From Bean to Cup,Claudia Neri,9780000000053,Food & Drink,Savory Pages,2013,168,Coffee culture and brewing,https://example.com/covers/bean_to_cup.jpg,Shelf FD1,true
+Windswept Dunes,Imogen Clarke,9780000000054,Literary Fiction,Maple & Ash,2016,304,Family and identity on the coast,https://example.com/covers/windswept_dunes.jpg,Shelf LF1,true
+The Joy of Mathematics,Nadia Kline,9780000000055,Math,NumberLine,2017,320,Patterns puzzles and proofs,https://example.com/covers/joy_mathematics.jpg,Shelf MA2,true
+A World of Cheese,Jean-Paul Martin,9780000000056,Cookbook,Savory Pages,2015,224,Cheeses of the world,https://example.com/covers/world_of_cheese.jpg,Shelf C3,true
+Desert Stargazer,Rami Nahas,9780000000057,Poetry,BlueWave,2014,128,Poems beneath desert skies,https://example.com/covers/desert_stargazer.jpg,Shelf P3,true
+The Sustainable Home,Erin Walker,9780000000058,Environment,GreenLeaf,2019,260,Low impact living guide,https://example.com/covers/sustainable_home.jpg,Shelf ENV1,true
+Marine Life Sketchbook,Alex Yu,9780000000059,Art,Atelier,2021,192,Drawing ocean creatures,https://example.com/covers/marine_sketchbook.jpg,Shelf AR4,true
+Snowbound Mystery,Colin Reed,9780000000060,Thriller,Redline Press,2013,308,Crime in a remote lodge,https://example.com/covers/snowbound_mystery.jpg,Shelf TH2,true
+Greek Myths Retold,Helena Papas,9780000000061,Mythology,Sunfire,2011,280,Classic myths in modern voice,https://example.com/covers/greek_myths.jpg,Shelf MY1,true
+Craft Beer Handbook,Max Steiner,9780000000062,Food & Drink,Savory Pages,2018,200,Brewing styles and tasting,https://example.com/covers/craft_beer.jpg,Shelf FD2,true
+Descent to Io,Kai O'Rourke,9780000000063,Science Fiction,Stellar House,2020,368,Mission to Jupiter's moon,https://example.com/covers/descent_io.jpg,Shelf A2,true
+The Watchmaker's Apprentice,Amara Holt,9780000000064,Steampunk,Sunfire,2017,344,Gears steam and destiny,https://example.com/covers/watchmaker_apprentice.jpg,Shelf F6,true
+Micro Habits That Stick,Olivia Trent,9780000000065,Self Help,LightPath,2022,216,Tiny changes big results,https://example.com/covers/micro_habits.jpg,Shelf SH2,true
+The Art of Tea,Mei Lin,9780000000066,Food & Drink,Savory Pages,2012,176,Tea history and brewing,https://example.com/covers/art_of_tea.jpg,Shelf FD3,true
+Digital Logic Demystified,Victor Tan,9780000000067,Engineering,Helix House,2016,340,From gates to CPUs,https://example.com/covers/digital_logic.jpg,Shelf ENG1,true
+Birds of the City,Paula Nguyen,9780000000068,Nature,WildTrail,2015,210,Urban birdwatching guide,https://example.com/covers/birds_city.jpg,Shelf N4,true
+A Primer on Statistics,Isabel Romero,9780000000069,Statistics,NumberLine,2013,300,Stats for curious minds,https://example.com/covers/primer_statistics.jpg,Shelf MA3,true
+Shadows in Kyoto,Haruto Sato,9780000000070,Historical Fiction,Maple & Ash,2014,352,Intrigue in old Japan,https://example.com/covers/shadows_kyoto.jpg,Shelf HF2,true
+Mind Over Marathon,Devin Brooks,9780000000071,Sports,Champions,2016,232,Mental game for endurance,https://example.com/covers/mind_marathon.jpg,Shelf SP3,true
+Pathways to Calm,Sara De Luca,9780000000072,Mental Health,Mindframe,2021,248,Anxiety relief techniques,https://example.com/covers/pathways_calm.jpg,Shelf PS2,true
+Django Web Projects,Anita George,9780000000073,Programming,CodeCraft,2019,360,Build real world Django apps,https://example.com/covers/django_projects.jpg,Shelf T7,true
+Atlas of World Cultures,Emre Kaya,9780000000074,Anthropology,EastWest,2012,320,Traditions across continents,https://example.com/covers/world_cultures.jpg,Shelf A3,true
+The Ceramic Studio,Frida Nilsson,9780000000075,Art,Atelier,2018,220,Clay basics and glazing,https://example.com/covers/ceramic_studio.jpg,Shelf AR5,true
+Green Roofs Handbook,Nikhil Rao,9780000000076,Architecture,Gridline,2020,268,Design build and maintain,https://example.com/covers/green_roofs.jpg,Shelf U2,true
+My First Science Lab,Samira Ali,9780000000077,Children,Little Steps,2015,128,Fun experiments for kids,https://example.com/covers/first_science_lab.jpg,Shelf CH1,true
+The Wine Explorer,Giulia Ferri,9780000000078,Food & Drink,Savory Pages,2016,256,Wines regions and tasting,https://example.com/covers/wine_explorer.jpg,Shelf FD4,true
+Mapping The Night Sky,Jonas Muller,9780000000079,Science,Helix House,2018,300,Star charts and constellations,https://example.com/covers/mapping_night_sky.jpg,Shelf S5,true
+Innovator's DNA Toolkit,Nate Howard,9780000000080,Business,Founders Press,2021,288,Methods to innovate consistently,https://example.com/covers/innovators_dna.jpg,Shelf B4,true
+RoboTales for Kids,Paige Turner,9780000000081,Children,Little Steps,2022,96,Stories about friendly robots,https://example.com/covers/robotales.jpg,Shelf CH2,true
+Coding with Java,Elena Marin,9780000000082,Programming,CodeCraft,2017,372,Modern Java for beginners,https://example.com/covers/coding_java.jpg,Shelf T8,true
+Sculpting Human Figures,Otto Klein,9780000000083,Art,Atelier,2013,260,Anatomy and clay techniques,https://example.com/covers/sculpting_figures.jpg,Shelf AR6,true
+Ocean Tides and Storms,Priya Nair,9780000000084,Science,Helix House,2015,312,Coastal ocean processes,https://example.com/covers/ocean_tides.jpg,Shelf S6,true
+The Forgotten Crypt,Elijah Ward,9780000000085,Horror,Midnight Ink,2012,290,Ancient secrets and terror,https://example.com/covers/forgotten_crypt.jpg,Shelf HO2,true
+The Botanist's Guide,Madeleine Roy,9780000000086,Botany,GreenLeaf,2018,304,Plant families and keys,https://example.com/covers/botanists_guide.jpg,Shelf SCI1,true
+Aerial Photography Basics,Nikolai Petrov,9780000000087,Photography,LensLab,2019,220,Drone shots and safety,https://example.com/covers/aerial_photo.jpg,Shelf PH2,true
+Pilgrimage Paths,Seamus O'Neil,9780000000088,Travel,Compass,2013,244,Walking ancient routes,https://example.com/covers/pilgrimage_paths.jpg,Shelf TR2,true
+The Actor's Workshop,Carla Mendes,9780000000089,Drama,StageLine,2014,216,Acting exercises and methods,https://example.com/covers/actors_workshop.jpg,Shelf DR1,true
+Bonsai for Beginners,Akira Yamada,9780000000090,Gardening,Leaf & Soil,2011,176,Creating and caring for bonsai,https://example.com/covers/bonsai_beginners.jpg,Shelf G2,true
+Sailing The Blue,Anders Holm,9780000000091,Sports,Champions,2018,248,Sailing skills and seamanship,https://example.com/covers/sailing_blue.jpg,Shelf SP4,true
+Art of Negotiation,Leila Haddad,9780000000092,Business,North Star,2015,264,Practical negotiation tactics,https://example.com/covers/art_negotiation.jpg,Shelf B5,true
+The Mindful Parent,Nora Weiss,9780000000093,Parenting,Little Steps,2019,232,Presence in parenting,https://example.com/covers/mindful_parent.jpg,Shelf PAR2,true
+Zero Waste Kitchen,Anouk Dubois,9780000000094,Environment,GreenLeaf,2020,192,Reduce food waste at home,https://example.com/covers/zero_waste_kitchen.jpg,Shelf ENV2,true
+Mediterranean Diet Guide,Caterina Russo,9780000000095,Health,Vitality,2016,208,Healthy eating the Mediterranean way,https://example.com/covers/med_diet.jpg,Shelf H4,true
+Caves Beneath,Noor El-Sayed,9780000000096,Adventure,Sunfire,2017,300,Exploration in subterranean worlds,https://example.com/covers/caves_beneath.jpg,Shelf ADV1,true
+Architecting Cloud Systems,Rui Carvalho,9780000000097,Technology,Gridline,2022,368,Cloud patterns and practices,https://example.com/covers/cloud_systems.jpg,Shelf T9,true
+Shaping The Future Schools,Helga Braun,9780000000098,Education,Canvas Press,2018,248,Trends in learning design,https://example.com/covers/future_schools.jpg,Shelf ED2,true
+Craft of Screenwriting,Diego Luna,9780000000099,Writing,Plotline,2015,224,From concept to script,https://example.com/covers/screenwriting_craft.jpg,Shelf W1,true
+The Hidden Reef,Isla Cameron,9780000000100,Adventure,Sunfire,2019,312,Peril in the coral triangle,https://example.com/covers/hidden_reef.jpg,Shelf ADV2,true
+Indian Engineering Handbook Vol 1,Amit Sharma,9782000000001,Engineering,Helix House,2010,420,Comprehensive reference for engineers,https://example.com/covers/indian_engineering_1.jpg,Shelf INE1,true
+Indian Engineering Handbook Vol 2,Neha Reddy,9782000000002,Engineering,Helix House,2011,430,Applied mechanics and materials,https://example.com/covers/indian_engineering_2.jpg,Shelf INE2,true
+MBBS Essentials 1,Dr. Arjun Patel,9782000000003,Medicine,North Star,2012,520,Clinical basics for MBBS students,https://example.com/covers/mbbs_essentials_1.jpg,Shelf INM1,true
+MBBS Essentials 2,Dr. Priya Verma,9782000000004,Medicine,North Star,2013,540,Pharmacology and case studies,https://example.com/covers/mbbs_essentials_2.jpg,Shelf INM2,true
+Stories from Kolkata,Ananya Banerjee,9782000000005,Story,Maple & Ash,2014,260,Short tales from the City of Joy,https://example.com/covers/stories_kolkata.jpg,Shelf INS1,true
+Mumbai Action Chronicles 1,Rohit Kapoor,9782000000006,Action,Sunfire,2015,340,High-stakes pursuit across Mumbai,https://example.com/covers/mumbai_action_1.jpg,Shelf INA1,true
+Myths of Bharat 1,Meera Iyer,9782000000007,Mythology,Emerald Ink,2011,300,Retellings of Indian epics,https://example.com/covers/myths_bharat_1.jpg,Shelf INY1,true
+Indian History Perspectives 1,Suresh Rao,9782000000008,History (India),EastWest,2010,380,Early civilizations to empires,https://example.com/covers/india_history_1.jpg,Shelf INH1,true
+Cricket Tactics 1,Vikram Singh,9782000000009,Sports,Champions,2016,220,Modern strategies in cricket,https://example.com/covers/cricket_tactics_1.jpg,Shelf INC1,true
+Ayurveda Living 1,Dr. Kavya Nair,9782000000010,Ayurveda,Shanti Press,2017,240,Daily routines and remedies,https://example.com/covers/ayurveda_living_1.jpg,Shelf INA2,true
+Yoga Sutras Explained 1,Ritu Chawla,9782000000011,Spirituality,Shanti Press,2015,280,Accessible commentary on Yoga Sutras,https://example.com/covers/yoga_sutras_1.jpg,Shelf INS2,true
+Indian Cuisine Classics 1,Chef Sanjay Mehta,9782000000012,Cuisine,Savory Pages,2018,200,Authentic recipes from across India,https://example.com/covers/indian_cuisine_1.jpg,Shelf INF1,true
+Travel India: Himalayas 1,Karan Thapa,9782000000013,Travel India,Compass,2014,220,Trekking routes and culture,https://example.com/covers/travel_himalayas_1.jpg,Shelf INT1,true
+Hindi Short Stories 1,Kiran Bhatt,9782000000014,Short Stories,Little Steps,2013,180,Contemporary Hindi short fiction,https://example.com/covers/hindi_short_stories_1.jpg,Shelf INSS1,true
+Tamil Literature Reader 1,Divya Subramanian,9782000000015,Tamil Literature,Canvas Press,2012,240,Selections from classic Tamil texts,https://example.com/covers/tamil_reader_1.jpg,Shelf INTL1,true
+Urdu Ghazals 1,Arif Hussain,9782000000016,Urdu Poetry,BlueWave,2011,160,Modern and classical ghazals,https://example.com/covers/urdu_ghazals_1.jpg,Shelf INUP1,true
+Bengali Poems 1,Shreya Chatterjee,9782000000017,Poetry,BlueWave,2015,168,Poetic voices from Bengal,https://example.com/covers/bengali_poems_1.jpg,Shelf INBP1,true
+Kannada Stories 1,Rakesh Gowda,9782000000018,Short Stories,Sunfire,2016,190,Short stories from Karnataka,https://example.com/covers/kannada_stories_1.jpg,Shelf INKS1,true
+Marathi Classics 1,Aniket Deshmukh,9782000000019,Marathi Literature,Atelier,2013,210,Curated Marathi literary works,https://example.com/covers/marathi_classics_1.jpg,Shelf INML1,true
+Telugu Folk Tales 1,Anusha Reddy,9782000000020,Telugu Literature,Little Steps,2012,160,Timeless folk narratives,https://example.com/covers/telugu_folk_1.jpg,Shelf INTG1,true
+Punjabi Sufi Poetry 1,Harjit Kaur,9782000000021,Poetry,BlueWave,2014,172,Sufi verses from Punjab,https://example.com/covers/punjabi_sufi_1.jpg,Shelf INPP1,true
+Indian Economics 1,Prof. Raghav Joshi,9782000000022,Economics,Equilibrium,2018,300,Markets policy and growth in India,https://example.com/covers/indian_economics_1.jpg,Shelf INECO1,true
+Indian Politics 1,Anita Kulkarni,9782000000023,Politics,North Star,2017,280,Institutions and elections,https://example.com/covers/indian_politics_1.jpg,Shelf INPOL1,true
+Philosophy of India 1,Devika Menon,9782000000024,Philosophy,Shanti Press,2011,260,Classical Indian philosophies,https://example.com/covers/indian_philosophy_1.jpg,Shelf INPHI1,true
+Bollywood Stories 1,Farhan Ali,9782000000025,Entertainment,Sunfire,2016,240,Behind the scenes narratives,https://example.com/covers/bollywood_stories_1.jpg,Shelf INBOL1,true
+IT in India 1,Shruti Narang,9782000000026,Technology,CodeCraft,2019,340,IT services and startups,https://example.com/covers/it_india_1.jpg,Shelf INTY1,true
+Computer Science Guide India 1,Nikhil Gupta,9782000000027,Computer Science,CodeCraft,2020,360,CS topics for Indian students,https://example.com/covers/cs_india_1.jpg,Shelf INCS1,true
+Indian Engineering Handbook Vol 3,Amit Sharma,9782000000028,Engineering,Helix House,2012,425,Electrical and electronics focus,https://example.com/covers/indian_engineering_3.jpg,Shelf INE3,true
+MBBS Essentials 3,Dr. Arjun Patel,9782000000029,Medicine,North Star,2014,550,Pathology essentials,https://example.com/covers/mbbs_essentials_3.jpg,Shelf INM3,true
+Stories from Chennai,Divya Subramanian,9782000000030,Story,Maple & Ash,2015,250,Everyday life in Chennai,https://example.com/covers/stories_chennai.jpg,Shelf INS3,true
+Mumbai Action Chronicles 2,Rohit Kapoor,9782000000031,Action,Sunfire,2017,350,New mission in the city,https://example.com/covers/mumbai_action_2.jpg,Shelf INA2,true
+Myths of Bharat 2,Meera Iyer,9782000000032,Mythology,Emerald Ink,2012,310,Legends retold,https://example.com/covers/myths_bharat_2.jpg,Shelf INY2,true
+Indian History Perspectives 2,Suresh Rao,9782000000033,History (India),EastWest,2011,390,Medieval to modern transitions,https://example.com/covers/india_history_2.jpg,Shelf INH2,true
+Cricket Tactics 2,Vikram Singh,9782000000034,Sports,Champions,2018,230,Field settings and analysis,https://example.com/covers/cricket_tactics_2.jpg,Shelf INC2,true
+Ayurveda Living 2,Dr. Kavya Nair,9782000000035,Ayurveda,Shanti Press,2018,245,Herbs and therapies,https://example.com/covers/ayurveda_living_2.jpg,Shelf INA3,true
+Yoga Sutras Explained 2,Ritu Chawla,9782000000036,Spirituality,Shanti Press,2016,285,Deeper practices,https://example.com/covers/yoga_sutras_2.jpg,Shelf INS4,true
+Indian Cuisine Classics 2,Chef Sanjay Mehta,9782000000037,Cuisine,Savory Pages,2019,210,Regional favorites,https://example.com/covers/indian_cuisine_2.jpg,Shelf INF2,true
+Travel India: Himalayas 2,Karan Thapa,9782000000038,Travel India,Compass,2015,230,High passes and monasteries,https://example.com/covers/travel_himalayas_2.jpg,Shelf INT2,true
+Hindi Short Stories 2,Kiran Bhatt,9782000000039,Short Stories,Little Steps,2015,188,Urban tales,https://example.com/covers/hindi_short_stories_2.jpg,Shelf INSS2,true
+Tamil Literature Reader 2,Divya Subramanian,9782000000040,Tamil Literature,Canvas Press,2013,248,Classic poetry selections,https://example.com/covers/tamil_reader_2.jpg,Shelf INTL2,true
+Urdu Ghazals 2,Arif Hussain,9782000000041,Urdu Poetry,BlueWave,2013,168,Contemporary voices,https://example.com/covers/urdu_ghazals_2.jpg,Shelf INUP2,true
+Bengali Poems 2,Shreya Chatterjee,9782000000042,Poetry,BlueWave,2016,172,Modern Bengali verse,https://example.com/covers/bengali_poems_2.jpg,Shelf INBP2,true
+Kannada Stories 2,Rakesh Gowda,9782000000043,Short Stories,Sunfire,2017,196,Village chronicles,https://example.com/covers/kannada_stories_2.jpg,Shelf INKS2,true
+Marathi Classics 2,Aniket Deshmukh,9782000000044,Marathi Literature,Atelier,2014,216,19th century selections,https://example.com/covers/marathi_classics_2.jpg,Shelf INML2,true
+Telugu Folk Tales 2,Anusha Reddy,9782000000045,Telugu Literature,Little Steps,2014,166,Rural legends retold,https://example.com/covers/telugu_folk_2.jpg,Shelf INTG2,true
+Punjabi Sufi Poetry 2,Harjit Kaur,9782000000046,Poetry,BlueWave,2015,176,Love and devotion,https://example.com/covers/punjabi_sufi_2.jpg,Shelf INPP2,true
+Indian Economics 2,Prof. Raghav Joshi,9782000000047,Economics,Equilibrium,2020,306,Sectoral reforms,https://example.com/covers/indian_economics_2.jpg,Shelf INECO2,true
+Indian Politics 2,Anita Kulkarni,9782000000048,Politics,North Star,2019,286,Coalitions and governance,https://example.com/covers/indian_politics_2.jpg,Shelf INPOL2,true
+Philosophy of India 2,Devika Menon,9782000000049,Philosophy,Shanti Press,2012,268,Schools and thinkers,https://example.com/covers/indian_philosophy_2.jpg,Shelf INPHI2,true
+Bollywood Stories 2,Farhan Ali,9782000000050,Entertainment,Sunfire,2018,244,Cinema culture,https://example.com/covers/bollywood_stories_2.jpg,Shelf INBOL2,true
+IT in India 2,Shruti Narang,9782000000051,Technology,CodeCraft,2021,348,Digital transformation,https://example.com/covers/it_india_2.jpg,Shelf INTY2,true
+Computer Science Guide India 2,Nikhil Gupta,9782000000052,Computer Science,CodeCraft,2022,368,Algorithms and data structures,https://example.com/covers/cs_india_2.jpg,Shelf INCS2,true
+Indian Engineering Handbook Vol 4,Amit Sharma,9782000000053,Engineering,Helix House,2013,428,Production and manufacturing,https://example.com/covers/indian_engineering_4.jpg,Shelf INE4,true
+MBBS Essentials 4,Dr. Arjun Patel,9782000000054,Medicine,North Star,2015,558,Microbiology essentials,https://example.com/covers/mbbs_essentials_4.jpg,Shelf INM4,true
+Stories from Delhi,Ananya Banerjee,9782000000055,Story,Maple & Ash,2016,255,Capital city vignettes,https://example.com/covers/stories_delhi.jpg,Shelf INS5,true
+Mumbai Action Chronicles 3,Rohit Kapoor,9782000000056,Action,Sunfire,2019,360,Heist across the sea link,https://example.com/covers/mumbai_action_3.jpg,Shelf INA3,true
+Myths of Bharat 3,Meera Iyer,9782000000057,Mythology,Emerald Ink,2013,318,Heroes and demons,https://example.com/covers/myths_bharat_3.jpg,Shelf INY3,true
+Indian History Perspectives 3,Suresh Rao,9782000000058,History (India),EastWest,2012,396,Colonial encounters,https://example.com/covers/india_history_3.jpg,Shelf INH3,true
+Cricket Tactics 3,Vikram Singh,9782000000059,Sports,Champions,2020,236,White-ball strategies,https://example.com/covers/cricket_tactics_3.jpg,Shelf INC3,true
+Ayurveda Living 3,Dr. Kavya Nair,9782000000060,Ayurveda,Shanti Press,2020,252,Detox and wellness,https://example.com/covers/ayurveda_living_3.jpg,Shelf INA4,true
+Yoga Sutras Explained 3,Ritu Chawla,9782000000061,Spirituality,Shanti Press,2017,292,Mind and breath,https://example.com/covers/yoga_sutras_3.jpg,Shelf INS6,true
+Indian Cuisine Classics 3,Chef Sanjay Mehta,9782000000062,Cuisine,Savory Pages,2021,218,Street food favorites,https://example.com/covers/indian_cuisine_3.jpg,Shelf INF3,true
+Travel India: South 1,Karan Thapa,9782000000063,Travel India,Compass,2016,238,Temples and coasts,https://example.com/covers/travel_south_1.jpg,Shelf INT3,true
+Hindi Short Stories 3,Kiran Bhatt,9782000000064,Short Stories,Little Steps,2017,194,Monsoon tales,https://example.com/covers/hindi_short_stories_3.jpg,Shelf INSS3,true
+Tamil Literature Reader 3,Divya Subramanian,9782000000065,Tamil Literature,Canvas Press,2015,252,Prose selections,https://example.com/covers/tamil_reader_3.jpg,Shelf INTL3,true
+Urdu Ghazals 3,Arif Hussain,9782000000066,Urdu Poetry,BlueWave,2015,174,Romantic ghazals,https://example.com/covers/urdu_ghazals_3.jpg,Shelf INUP3,true
+Bengali Poems 3,Shreya Chatterjee,9782000000067,Poetry,BlueWave,2017,176,Reflections on city life,https://example.com/covers/bengali_poems_3.jpg,Shelf INBP3,true
+Kannada Stories 3,Rakesh Gowda,9782000000068,Short Stories,Sunfire,2019,198,City and village contrasts,https://example.com/covers/kannada_stories_3.jpg,Shelf INKS3,true
+Marathi Classics 3,Aniket Deshmukh,9782000000069,Marathi Literature,Atelier,2016,220,Poetry and prose,https://example.com/covers/marathi_classics_3.jpg,Shelf INML3,true
+Telugu Folk Tales 3,Anusha Reddy,9782000000070,Telugu Literature,Little Steps,2016,170,Heroes and tricksters,https://example.com/covers/telugu_folk_3.jpg,Shelf INTG3,true
+Punjabi Sufi Poetry 3,Harjit Kaur,9782000000071,Poetry,BlueWave,2017,180,Devotional verses,https://example.com/covers/punjabi_sufi_3.jpg,Shelf INPP3,true
+Indian Economics 3,Prof. Raghav Joshi,9782000000072,Economics,Equilibrium,2022,312,Trade and industry,https://example.com/covers/indian_economics_3.jpg,Shelf INECO3,true
+Indian Politics 3,Anita Kulkarni,9782000000073,Politics,North Star,2021,292,Federalism and states,https://example.com/covers/indian_politics_3.jpg,Shelf INPOL3,true
+Philosophy of India 3,Devika Menon,9782000000074,Philosophy,Shanti Press,2014,274,Logic and rhetoric,https://example.com/covers/indian_philosophy_3.jpg,Shelf INPHI3,true
+Bollywood Stories 3,Farhan Ali,9782000000075,Entertainment,Sunfire,2019,248,Music and dance,https://example.com/covers/bollywood_stories_3.jpg,Shelf INBOL3,true
+IT in India 3,Shruti Narang,9782000000076,Technology,CodeCraft,2023,356,AI and innovation hubs,https://example.com/covers/it_india_3.jpg,Shelf INTY3,true
+Computer Science Guide India 3,Nikhil Gupta,9782000000077,Computer Science,CodeCraft,2023,372,System design basics,https://example.com/covers/cs_india_3.jpg,Shelf INCS3,true
+"Matrices and Calculus (A8001)",Vardhaman CSE Faculty,9782100000101,Basic Sciences,Vardhaman Press,2022,320,Course companion for A8001,https://example.com/covers/matrices_calculus_a8001.jpg,Shelf EDU,true
+"Engineering Chemistry (A8008)",Vardhaman CSE Faculty,9782100000102,Basic Sciences,Vardhaman Press,2022,300,Course companion for A8008,https://example.com/covers/engg_chemistry_a8008.jpg,Shelf EDU,true
+"English for Skill Enhancement (A8010)",Vardhaman CSE Faculty,9782100000103,Humanities,Vardhaman Press,2022,220,Course companion for A8010,https://example.com/covers/english_skill_a8010.jpg,Shelf EDU,true
+"Digital Electronics (A8402)",Vardhaman CSE Faculty,9782100000104,Engineering Sciences,Vardhaman Press,2022,320,Course companion for A8402,https://example.com/covers/digital_electronics_a8402.jpg,Shelf EDU,true
+"Problem Solving through C (A8501)",Vardhaman CSE Faculty,9782100000105,Engineering Sciences,Vardhaman Press,2022,340,Course companion for A8501,https://example.com/covers/c_programming_a8501.jpg,Shelf EDU,true
+"Engineering Chemistry Laboratory (A8009)",Vardhaman CSE Faculty,9782100000106,Basic Sciences,Vardhaman Press,2022,180,Lab manual for A8009,https://example.com/covers/chem_lab_a8009.jpg,Shelf EDU,true
+"English Language and Communication Skills Laboratory (A8011)",Vardhaman CSE Faculty,9782100000107,Humanities,Vardhaman Press,2022,180,Lab manual for A8011,https://example.com/covers/english_lab_a8011.jpg,Shelf EDU,true
+"Problem Solving through C Laboratory (A8502)",Vardhaman CSE Faculty,9782100000108,Engineering Sciences,Vardhaman Press,2022,180,Lab manual for A8502,https://example.com/covers/c_lab_a8502.jpg,Shelf EDU,true
+"Computer Aided Drawing (A8302)",Vardhaman CSE Faculty,9782100000109,Engineering Sciences,Vardhaman Press,2022,220,Course companion for A8302,https://example.com/covers/cad_a8302.jpg,Shelf EDU,true
+"Social Innovation (A8021)",Vardhaman CSE Faculty,9782100000110,Engineering Sciences,Vardhaman Press,2022,200,Course companion for A8021,https://example.com/covers/social_innovation_a8021.jpg,Shelf EDU,true
+"Ordinary Differential Equations and Vector Calculus (A8002)",Vardhaman CSE Faculty,9782100000111,Basic Sciences,Vardhaman Press,2022,320,Course companion for A8002,https://example.com/covers/ode_vector_calc_a8002.jpg,Shelf EDU,true
+"Applied Physics (A8006)",Vardhaman CSE Faculty,9782100000112,Basic Sciences,Vardhaman Press,2022,300,Course companion for A8006,https://example.com/covers/applied_physics_a8006.jpg,Shelf EDU,true
+"Basic Electrical Engineering (A8204)",Vardhaman CSE Faculty,9782100000113,Engineering Sciences,Vardhaman Press,2022,280,Course companion for A8204,https://example.com/covers/bee_a8204.jpg,Shelf EDU,true
+"Data Structures (A8505)",Vardhaman CSE Faculty,9782100000114,Engineering Sciences,Vardhaman Press,2022,320,Course companion for A8505,https://example.com/covers/data_structures_a8505.jpg,Shelf EDU,true
+"Computer Organization (A8506)",Vardhaman CSE Faculty,9782100000115,Engineering Sciences,Vardhaman Press,2022,300,Course companion for A8506,https://example.com/covers/computer_org_a8506.jpg,Shelf EDU,true
+"Applied Physics Laboratory (A8007)",Vardhaman CSE Faculty,9782100000116,Basic Sciences,Vardhaman Press,2022,160,Lab manual for A8007,https://example.com/covers/physics_lab_a8007.jpg,Shelf EDU,true
+"Basic Electrical Engineering Laboratory (A8205)",Vardhaman CSE Faculty,9782100000117,Engineering Sciences,Vardhaman Press,2022,160,Lab manual for A8205,https://example.com/covers/bee_lab_a8205.jpg,Shelf EDU,true
+"Engineering Workshop (A8301)",Vardhaman CSE Faculty,9782100000118,Engineering Sciences,Vardhaman Press,2022,200,Workshop manual for A8301,https://example.com/covers/engg_workshop_a8301.jpg,Shelf EDU,true
+"Data Structures Laboratory (A8507)",Vardhaman CSE Faculty,9782100000119,Engineering Sciences,Vardhaman Press,2022,180,Lab manual for A8507,https://example.com/covers/ds_lab_a8507.jpg,Shelf EDU,true
+"Python Programming Laboratory (A8508)",Vardhaman CSE Faculty,9782100000120,Engineering Sciences,Vardhaman Press,2022,180,Lab manual for A8508,https://example.com/covers/python_lab_a8508.jpg,Shelf EDU,true
+"Engineering Exploration (A8022)",Vardhaman CSE Faculty,9782100000121,Engineering Sciences,Vardhaman Press,2022,200,Project-based learning guide for A8022,https://example.com/covers/engg_exploration_a8022.jpg,Shelf EDU,true
+"Business Economics and Financial Analysis (A8013)",Vardhaman CSE Faculty,9782100000122,Humanities,Vardhaman Press,2022,300,Course companion for A8013,https://example.com/covers/befa_a8013.jpg,Shelf EDU,true
+"Discrete Mathematical Structures (A8509)",Vardhaman CSE Faculty,9782100000123,Engineering Sciences,Vardhaman Press,2022,320,Course companion for A8509,https://example.com/covers/dms_a8509.jpg,Shelf EDU,true
+"Object Oriented Programming (A8601)",Vardhaman CSE Faculty,9782100000124,Professional Core,Vardhaman Press,2022,340,Course companion for A8601,https://example.com/covers/oop_a8601.jpg,Shelf EDU,true
+"Operating Systems (A8510)",Vardhaman CSE Faculty,9782100000125,Professional Core,Vardhaman Press,2022,340,Course companion for A8510,https://example.com/covers/os_a8510.jpg,Shelf EDU,true
+"Advanced Data Structures (A8511)",Vardhaman CSE Faculty,9782100000126,Professional Core,Vardhaman Press,2022,360,Course companion for A8511,https://example.com/covers/ads_a8511.jpg,Shelf EDU,true
+"Object Oriented Programming Laboratory (A8602)",Vardhaman CSE Faculty,9782100000127,Professional Core,Vardhaman Press,2022,180,Lab manual for A8602,https://example.com/covers/oop_lab_a8602.jpg,Shelf EDU,true
+"Operating Systems Laboratory (A8512)",Vardhaman CSE Faculty,9782100000128,Professional Core,Vardhaman Press,2022,180,Lab manual for A8512,https://example.com/covers/os_lab_a8512.jpg,Shelf EDU,true
+"Advanced Data Structures Laboratory (A8513)",Vardhaman CSE Faculty,9782100000129,Professional Core,Vardhaman Press,2022,180,Lab manual for A8513,https://example.com/covers/ads_lab_a8513.jpg,Shelf EDU,true
+"Engineering Design Thinking (A8023)",Vardhaman CSE Faculty,9782100000130,Project/Workshop,Vardhaman Press,2022,200,Project-based guide for A8023,https://example.com/covers/design_thinking_a8023.jpg,Shelf EDU,true
+"Environmental Science and Technology (A8032)",Vardhaman CSE Faculty,9782100000131,Mandatory Course,Vardhaman Press,2022,220,Course companion for A8032,https://example.com/covers/evs_a8032.jpg,Shelf EDU,true
+"Computer Oriented Statistical Methods (A8005)",Vardhaman CSE Faculty,9782100000132,Basic Sciences,Vardhaman Press,2022,320,Course companion for A8005,https://example.com/covers/cosm_a8005.jpg,Shelf EDU,true
+"Database Management Systems (A8514)",Vardhaman CSE Faculty,9782100000133,Engineering Sciences,Vardhaman Press,2022,340,Course companion for A8514,https://example.com/covers/dbms_a8514.jpg,Shelf EDU,true
+"Formal Languages and Automata Theory (A8515)",Vardhaman CSE Faculty,9782100000134,Professional Core,Vardhaman Press,2022,320,Course companion for A8515,https://example.com/covers/flat_a8515.jpg,Shelf EDU,true
+"Design and Analysis of Algorithms (A8516)",Vardhaman CSE Faculty,9782100000135,Professional Core,Vardhaman Press,2022,340,Course companion for A8516,https://example.com/covers/daa_a8516.jpg,Shelf EDU,true
+"Artificial Intelligence (A8702)",Vardhaman CSE Faculty,9782100000136,Professional Core,Vardhaman Press,2022,340,Course companion for A8702,https://example.com/covers/ai_a8702.jpg,Shelf EDU,true
+"Database Management Systems Laboratory (A8517)",Vardhaman CSE Faculty,9782100000137,Professional Core,Vardhaman Press,2022,180,Lab manual for A8517,https://example.com/covers/dbms_lab_a8517.jpg,Shelf EDU,true
+"Python for Data Analysis (A8518)",Vardhaman CSE Faculty,9782100000138,Professional Core,Vardhaman Press,2022,200,Skill development guide for A8518,https://example.com/covers/python_data_a8518.jpg,Shelf EDU,true
+"IoT Laboratory (A8603)",Vardhaman CSE Faculty,9782100000139,Professional Core,Vardhaman Press,2022,180,Lab manual for A8603,https://example.com/covers/iot_lab_a8603.jpg,Shelf EDU,true
+"Product Realization (A8024)",Vardhaman CSE Faculty,9782100000140,Project/Workshop,Vardhaman Press,2022,200,Project-based guide for A8024,https://example.com/covers/product_realization_a8024.jpg,Shelf EDU,true
+"Gender Sensitization (A8031)",Vardhaman CSE Faculty,9782100000141,Mandatory Course,Vardhaman Press,2022,200,Course companion for A8031,https://example.com/covers/gender_sens_a8031.jpg,Shelf EDU,true
+"Universal Human Values 2: Understanding Harmony (A8033)",Vardhaman CSE Faculty,9782100000142,Mandatory Course,Vardhaman Press,2022,220,Course companion for A8033,https://example.com/covers/uhv2_a8033.jpg,Shelf EDU,true
+"Computer Networks (A8519)",Vardhaman CSE Faculty,9782100000143,Professional Core,Vardhaman Press,2022,340,Course companion for A8519,https://example.com/covers/cn_a8519.jpg,Shelf EDU,true
+"Software Engineering (A8520)",Vardhaman CSE Faculty,9782100000144,Professional Core,Vardhaman Press,2022,340,Course companion for A8520,https://example.com/covers/se_a8520.jpg,Shelf EDU,true
+"Web Technologies (A8604)",Vardhaman CSE Faculty,9782100000145,Professional Core,Vardhaman Press,2022,320,Course companion for A8604,https://example.com/covers/webtech_a8604.jpg,Shelf EDU,true
+"Machine Learning (A8703)",Vardhaman CSE Faculty,9782100000146,Professional Core,Vardhaman Press,2022,360,Course companion for A8703,https://example.com/covers/ml_a8703.jpg,Shelf EDU,true
+"Web Technologies Laboratory (A8605)",Vardhaman CSE Faculty,9782100000147,Professional Core,Vardhaman Press,2022,180,Lab manual for A8605,https://example.com/covers/webtech_lab_a8605.jpg,Shelf EDU,true
+"Machine Learning Laboratory (A8704)",Vardhaman CSE Faculty,9782100000148,Professional Core,Vardhaman Press,2022,180,Lab manual for A8704,https://example.com/covers/ml_lab_a8704.jpg,Shelf EDU,true
+"Mobile Application Development (A8606)",Vardhaman CSE Faculty,9782100000149,Professional Core,Vardhaman Press,2022,220,Skill development guide for A8606,https://example.com/covers/mobile_dev_a8606.jpg,Shelf EDU,true
+"Advanced English Communication Skills Laboratory (A8012)",Vardhaman CSE Faculty,9782100000150,Humanities,Vardhaman Press,2022,160,Lab manual for A8012,https://example.com/covers/aecs_lab_a8012.jpg,Shelf EDU,true
+"Research Methodology (A8035)",Vardhaman CSE Faculty,9782100000151,Mandatory Course,Vardhaman Press,2022,220,Course companion for A8035,https://example.com/covers/research_method_a8035.jpg,Shelf EDU,true
+"Cloud Computing and Virtualization (A8522)",Vardhaman CSE Faculty,9782100000152,Professional Core,Vardhaman Press,2022,340,Course companion for A8522,https://example.com/covers/cloud_virtualization_a8522.jpg,Shelf EDU,true
+"Information Security (A8607)",Vardhaman CSE Faculty,9782100000153,Professional Core,Vardhaman Press,2022,340,Course companion for A8607,https://example.com/covers/infosec_a8607.jpg,Shelf EDU,true
+"Compiler Design (A8523)",Vardhaman CSE Faculty,9782100000154,Professional Core,Vardhaman Press,2022,340,Course companion for A8523,https://example.com/covers/compiler_design_a8523.jpg,Shelf EDU,true
+"Cloud Computing and Virtualization Laboratory (A8524)",Vardhaman CSE Faculty,9782100000155,Professional Core,Vardhaman Press,2022,180,Lab manual for A8524,https://example.com/covers/cloud_lab_a8524.jpg,Shelf EDU,true
+"Network and Information Security Laboratory (A8612)",Vardhaman CSE Faculty,9782100000156,Professional Core,Vardhaman Press,2022,180,Lab manual for A8612,https://example.com/covers/nsl_lab_a8612.jpg,Shelf EDU,true
+"RUST Programming (A8525)",Vardhaman CSE Faculty,9782100000157,Professional Core,Vardhaman Press,2022,260,Skill development guide for A8525,https://example.com/covers/rust_programming_a8525.jpg,Shelf EDU,true
+"Mini-Project / Internship (A8041)",Vardhaman CSE Faculty,9782100000158,Project/Workshop,Vardhaman Press,2022,160,Guide for A8041,https://example.com/covers/mini_project_a8041.jpg,Shelf EDU,true
+"Indian Constitution (A8034)",Vardhaman CSE Faculty,9782100000159,Mandatory Course,Vardhaman Press,2022,200,Course companion for A8034,https://example.com/covers/indian_constitution_a8034.jpg,Shelf EDU,true
+"Data Mining (A8526)",Vardhaman CSE Faculty,9782100000160,Professional Core,Vardhaman Press,2022,340,Course companion for A8526,https://example.com/covers/data_mining_a8526.jpg,Shelf EDU,true
+"Big Data Analytics (A8806)",Vardhaman CSE Faculty,9782100000161,Professional Core,Vardhaman Press,2022,340,Course companion for A8806,https://example.com/covers/big_data_analytics_a8806.jpg,Shelf EDU,true
+"Data Mining Laboratory (A8528)",Vardhaman CSE Faculty,9782100000162,Professional Core,Vardhaman Press,2022,180,Lab manual for A8528,https://example.com/covers/data_mining_lab_a8528.jpg,Shelf EDU,true
+"Big Data Analytics Laboratory (A8807)",Vardhaman CSE Faculty,9782100000163,Professional Core,Vardhaman Press,2022,180,Lab manual for A8807,https://example.com/covers/bda_lab_a8807.jpg,Shelf EDU,true
+"Project Work Phase – I (A8042)",Vardhaman CSE Faculty,9782100000164,Project/Workshop,Vardhaman Press,2022,240,Project guide for A8042,https://example.com/covers/project_phase1_a8042.jpg,Shelf EDU,true
+"Project Work Phase – II (A8043)",Vardhaman CSE Faculty,9782100000165,Project/Workshop,Vardhaman Press,2022,360,Project guide for A8043,https://example.com/covers/project_phase2_a8043.jpg,Shelf EDU,true
+"Ethical Hacking (A8651)",Vardhaman CSE Faculty,9782100000166,Professional Elective,Vardhaman Press,2022,300,Course companion for A8651,https://example.com/covers/ethical_hacking_a8651.jpg,Shelf EDU,true
+"Data Science for Engineers (A8851)",Vardhaman CSE Faculty,9782100000167,Professional Elective,Vardhaman Press,2022,320,Course companion for A8851,https://example.com/covers/ds_engineers_a8851.jpg,Shelf EDU,true
+"Advanced Computer Architecture (A8551)",Vardhaman CSE Faculty,9782100000168,Professional Elective,Vardhaman Press,2022,320,Course companion for A8551,https://example.com/covers/aca_a8551.jpg,Shelf EDU,true
+"Unified Modeling Language (A8557)",Vardhaman CSE Faculty,9782100000169,Professional Elective,Vardhaman Press,2022,280,Course companion for A8557,https://example.com/covers/uml_a8557.jpg,Shelf EDU,true
+"Cyber Security (A8652)",Vardhaman CSE Faculty,9782100000170,Professional Elective,Vardhaman Press,2022,300,Course companion for A8652,https://example.com/covers/cyber_security_a8652.jpg,Shelf EDU,true
+"Data Analytics (A8804)",Vardhaman CSE Faculty,9782100000171,Professional Elective,Vardhaman Press,2022,320,Course companion for A8804,https://example.com/covers/data_analytics_a8804.jpg,Shelf EDU,true
+"Parallel Computing (A8552)",Vardhaman CSE Faculty,9782100000172,Professional Elective,Vardhaman Press,2022,320,Course companion for A8552,https://example.com/covers/parallel_computing_a8552.jpg,Shelf EDU,true
+"Agile Project Management (A8558)",Vardhaman CSE Faculty,9782100000173,Professional Elective,Vardhaman Press,2022,280,Course companion for A8558,https://example.com/covers/agile_pm_a8558.jpg,Shelf EDU,true
+"Web and Database Security (A8653)",Vardhaman CSE Faculty,9782100000174,Professional Elective,Vardhaman Press,2022,300,Course companion for A8653,https://example.com/covers/web_db_security_a8653.jpg,Shelf EDU,true
+"Deep Learning (A8707)",Vardhaman CSE Faculty,9782100000175,Professional Elective,Vardhaman Press,2022,340,Course companion for A8707,https://example.com/covers/deep_learning_a8707.jpg,Shelf EDU,true
+"Grid Computing (A8553)",Vardhaman CSE Faculty,9782100000176,Professional Elective,Vardhaman Press,2022,300,Course companion for A8553,https://example.com/covers/grid_computing_a8553.jpg,Shelf EDU,true
+"Software Testing Methodologies (A8559)",Vardhaman CSE Faculty,9782100000177,Professional Elective,Vardhaman Press,2022,300,Course companion for A8559,https://example.com/covers/stm_a8559.jpg,Shelf EDU,true
+"Cloud Security (A8654)",Vardhaman CSE Faculty,9782100000178,Professional Elective,Vardhaman Press,2022,300,Course companion for A8654,https://example.com/covers/cloud_security_a8654.jpg,Shelf EDU,true
+"Natural Language Processing (A8706)",Vardhaman CSE Faculty,9782100000179,Professional Elective,Vardhaman Press,2022,320,Course companion for A8706,https://example.com/covers/nlp_a8706.jpg,Shelf EDU,true
+"Serverless Computing (A8554)",Vardhaman CSE Faculty,9782100000180,Professional Elective,Vardhaman Press,2022,300,Course companion for A8554,https://example.com/covers/serverless_a8554.jpg,Shelf EDU,true
+"Design Patterns (A8560)",Vardhaman CSE Faculty,9782100000181,Professional Elective,Vardhaman Press,2022,320,Course companion for A8560,https://example.com/covers/design_patterns_a8560.jpg,Shelf EDU,true
+"IoT Security (A8655)",Vardhaman CSE Faculty,9782100000182,Professional Elective,Vardhaman Press,2022,300,Course companion for A8655,https://example.com/covers/iot_security_a8655.jpg,Shelf EDU,true
+"Web and Social Media Analytics (A8856)",Vardhaman CSE Faculty,9782100000183,Professional Elective,Vardhaman Press,2022,320,Course companion for A8856,https://example.com/covers/wsma_a8856.jpg,Shelf EDU,true
+"Edge Computing (A8555)",Vardhaman CSE Faculty,9782100000184,Professional Elective,Vardhaman Press,2022,300,Course companion for A8555,https://example.com/covers/edge_computing_a8555.jpg,Shelf EDU,true
+"Software Architectures (A8561)",Vardhaman CSE Faculty,9782100000185,Professional Elective,Vardhaman Press,2022,320,Course companion for A8561,https://example.com/covers/software_arch_a8561.jpg,Shelf EDU,true
+"Blockchain Technology (A8656)",Vardhaman CSE Faculty,9782100000186,Professional Elective,Vardhaman Press,2022,320,Course companion for A8656,https://example.com/covers/blockchain_a8656.jpg,Shelf EDU,true
+"Optimization Techniques for Analytics (A8853)",Vardhaman CSE Faculty,9782100000187,Professional Elective,Vardhaman Press,2022,320,Course companion for A8853,https://example.com/covers/optimization_analytics_a8853.jpg,Shelf EDU,true
+"Quantum Computing (A8556)",Vardhaman CSE Faculty,9782100000188,Professional Elective,Vardhaman Press,2022,320,Course companion for A8556,https://example.com/covers/quantum_computing_a8556.jpg,Shelf EDU,true
+"Software Process and Project Management (A8562)",Vardhaman CSE Faculty,9782100000189,Professional Elective,Vardhaman Press,2022,320,Course companion for A8562,https://example.com/covers/sppm_a8562.jpg,Shelf EDU,true
+"Smart Cities (A8181)",Vardhaman CSE Faculty,9782100000190,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8181,https://example.com/covers/smart_cities_a8181.jpg,Shelf EDU,true
+"Disaster Management (A8182)",Vardhaman CSE Faculty,9782100000191,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8182,https://example.com/covers/disaster_mgmt_a8182.jpg,Shelf EDU,true
+"Environmental Pollution Management (A8183)",Vardhaman CSE Faculty,9782100000192,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8183,https://example.com/covers/epm_a8183.jpg,Shelf EDU,true
+"Green Building and Sustainability (A8155)",Vardhaman CSE Faculty,9782100000193,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8155,https://example.com/covers/green_building_a8155.jpg,Shelf EDU,true
+"Electric Vehicles (A8224)",Vardhaman CSE Faculty,9782100000194,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8224,https://example.com/covers/ev_a8224.jpg,Shelf EDU,true
+"Solar Energy and Applications (A8281)",Vardhaman CSE Faculty,9782100000195,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8281,https://example.com/covers/solar_energy_a8281.jpg,Shelf EDU,true
+"Energy Storage Systems (A8282)",Vardhaman CSE Faculty,9782100000196,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8282,https://example.com/covers/energy_storage_a8282.jpg,Shelf EDU,true
+"Power Generation Systems (A8283)",Vardhaman CSE Faculty,9782100000197,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8283,https://example.com/covers/power_generation_a8283.jpg,Shelf EDU,true
+"Hybrid Vehicles (A8381)",Vardhaman CSE Faculty,9782100000198,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8381,https://example.com/covers/hybrid_vehicles_a8381.jpg,Shelf EDU,true
+"Fundamentals of Robotics (A8382)",Vardhaman CSE Faculty,9782100000199,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8382,https://example.com/covers/robotics_a8382.jpg,Shelf EDU,true
+"3D Printing (A8383)",Vardhaman CSE Faculty,9782100000200,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8383,https://example.com/covers/3d_printing_a8383.jpg,Shelf EDU,true
+"Digital Electronics (A8402 OE)",Vardhaman CSE Faculty,9782100000201,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8402,https://example.com/covers/digital_electronics_oe_a8402.jpg,Shelf EDU,true
+"Basic Electronics (A8481)",Vardhaman CSE Faculty,9782100000202,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8481,https://example.com/covers/basic_electronics_a8481.jpg,Shelf EDU,true
+"Principles of Communication Engineering (A8482)",Vardhaman CSE Faculty,9782100000203,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8482,https://example.com/covers/pce_a8482.jpg,Shelf EDU,true
+"Fundamentals of IoT (A8483)",Vardhaman CSE Faculty,9782100000204,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8483,https://example.com/covers/foi_a8483.jpg,Shelf EDU,true
+"Introduction to Embedded Systems (A8484)",Vardhaman CSE Faculty,9782100000205,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8484,https://example.com/covers/embedded_intro_a8484.jpg,Shelf EDU,true
+"Operating Systems (A8510 OE)",Vardhaman CSE Faculty,9782100000206,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8510,https://example.com/covers/os_oe_a8510.jpg,Shelf EDU,true
+"Database Management Systems (A8514 OE)",Vardhaman CSE Faculty,9782100000207,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8514,https://example.com/covers/dbms_oe_a8514.jpg,Shelf EDU,true
+"Software Engineering (A8520 OE)",Vardhaman CSE Faculty,9782100000208,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8520,https://example.com/covers/se_oe_a8520.jpg,Shelf EDU,true
+"Information Security (A8607 OE)",Vardhaman CSE Faculty,9782100000209,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8607,https://example.com/covers/infosec_oe_a8607.jpg,Shelf EDU,true
+"Java Programming (A8608)",Vardhaman CSE Faculty,9782100000210,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8608,https://example.com/covers/java_prog_a8608.jpg,Shelf EDU,true
+"Ethical Hacking (A8651 OE)",Vardhaman CSE Faculty,9782100000211,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8651,https://example.com/covers/ethical_hacking_oe_a8651.jpg,Shelf EDU,true
+"Cyber Security (A8652 OE)",Vardhaman CSE Faculty,9782100000212,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8652,https://example.com/covers/cyber_security_oe_a8652.jpg,Shelf EDU,true
+"Blockchain Technology (A8656 OE)",Vardhaman CSE Faculty,9782100000213,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8656,https://example.com/covers/blockchain_oe_a8656.jpg,Shelf EDU,true
+"Robotic Process Automation (A8658)",Vardhaman CSE Faculty,9782100000214,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8658,https://example.com/covers/rpa_a8658.jpg,Shelf EDU,true
+"E-Commerce (A8681)",Vardhaman CSE Faculty,9782100000215,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8681,https://example.com/covers/ecommerce_a8681.jpg,Shelf EDU,true
+"Full Stack Development (A8682)",Vardhaman CSE Faculty,9782100000216,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8682,https://example.com/covers/fullstack_a8682.jpg,Shelf EDU,true
+"Artificial Intelligence (A8702 OE)",Vardhaman CSE Faculty,9782100000217,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8702,https://example.com/covers/ai_oe_a8702.jpg,Shelf EDU,true
+"Computer Organization and Architecture (A8781)",Vardhaman CSE Faculty,9782100000218,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8781,https://example.com/covers/coa_a8781.jpg,Shelf EDU,true
+"Data Science for Engineers (A8851 OE)",Vardhaman CSE Faculty,9782100000219,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8851,https://example.com/covers/ds_engineers_oe_a8851.jpg,Shelf EDU,true
+"Mathematical Programming (A8081)",Vardhaman CSE Faculty,9782100000220,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8081,https://example.com/covers/math_prog_a8081.jpg,Shelf EDU,true
+"Transform Calculus (A8082)",Vardhaman CSE Faculty,9782100000221,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8082,https://example.com/covers/transform_calc_a8082.jpg,Shelf EDU,true
+"Numerical Techniques (A8083)",Vardhaman CSE Faculty,9782100000222,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8083,https://example.com/covers/numerical_tech_a8083.jpg,Shelf EDU,true
+"Entrepreneurship Development (A8084)",Vardhaman CSE Faculty,9782100000223,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8084,https://example.com/covers/entrepreneurship_a8084.jpg,Shelf EDU,true
+"Logistics and Supply Chain Management (A8085)",Vardhaman CSE Faculty,9782100000224,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8085,https://example.com/covers/lscm_a8085.jpg,Shelf EDU,true
+"Management Science (A8086)",Vardhaman CSE Faculty,9782100000225,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8086,https://example.com/covers/management_science_a8086.jpg,Shelf EDU,true
+"Human Resource Management (A8087)",Vardhaman CSE Faculty,9782100000226,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8087,https://example.com/covers/hrm_a8087.jpg,Shelf EDU,true
+"Organizational Behaviour (A8088)",Vardhaman CSE Faculty,9782100000227,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8088,https://example.com/covers/organizational_behaviour_a8088.jpg,Shelf EDU,true
+"Intellectual Property Rights (A8089)",Vardhaman CSE Faculty,9782100000228,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8089,https://example.com/covers/ipr_a8089.jpg,Shelf EDU,true
+"Professional Practice, Law & Ethics (A8090)",Vardhaman CSE Faculty,9782100000229,Open Elective,Vardhaman Press,2022,260,Open elective companion for A8090,https://example.com/covers/pple_a8090.jpg,Shelf EDU,true
+"National Cadet Corps (NCC) (A8091)",Vardhaman CSE Faculty,9782100000230,Open Elective,Vardhaman Press,2022,200,Open elective companion for A8091,https://example.com/covers/ncc_a8091.jpg,Shelf EDU,true

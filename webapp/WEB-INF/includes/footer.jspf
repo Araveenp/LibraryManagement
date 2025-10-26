@@ -1,0 +1,1 @@
+<div class="footer">© <%= java.time.Year.now() %> Library Management</div>

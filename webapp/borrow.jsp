@@ -1,13 +1,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Borrow a Book</title>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/styles.css" />
 </head>
 <body>
-    <h1>Borrow a Book</h1>
-    <form action="borrow" method="post">
-        <input type="text" name="bookId" placeholder="Enter Book ID" required>
-        <input type="submit" value="Borrow">
-    </form>
+<div class="container">
+        <%@ include file="/WEB-INF/includes/header.jspf" %>
+
+    <div class="panel">
+        <h1 class="heading">Borrow a Book</h1>
+        <form action="borrow" method="post">
+            <input type="text" name="bookId" placeholder="Enter Book ID" required>
+            <input type="submit" value="Borrow">
+        </form>
+    </div>
+
+        <%@ include file="/WEB-INF/includes/footer.jspf" %>
+</div>
 </body>
 </html>
