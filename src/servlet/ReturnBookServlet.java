@@ -26,6 +26,7 @@ public class ReturnBookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String bookIdStr = request.getParameter("bookId");
+        String roll = request.getParameter("studentRollNo");
         try {
             int bookId = Integer.parseInt(bookIdStr);
             Book book = bookDAO.getBookById(bookId);
@@ -33,11 +34,16 @@ public class ReturnBookServlet extends HttpServlet {
                 // Update borrow record to set return date
                 try (Connection conn = DBConnection.getConnection();
                      PreparedStatement ps = conn.prepareStatement(
-                             "UPDATE borrowed_books SET return_date=? WHERE book_id=? AND return_date IS NULL")) {
+                             "UPDATE borrowed_books SET return_date=? WHERE book_id=? AND student_roll_no=? AND return_date IS NULL")) {
                     LocalDate today = LocalDate.now();
                     ps.setDate(1, java.sql.Date.valueOf(today));
                     ps.setInt(2, bookId);
-                    ps.executeUpdate();
+                    ps.setString(3, roll);
+                    int updated = ps.executeUpdate();
+                    if (updated == 0) {
+                        response.getWriter().println("No active loan found for this Book ID and Roll No.");
+                        return;
+                    }
                 }
 
                 // Increment available_copies (up to total_copies) and update availability
@@ -49,7 +55,7 @@ public class ReturnBookServlet extends HttpServlet {
                 book.setAvailableCopies(avail);
                 book.setAvailable(avail > 0);
                 bookDAO.updateBook(book);
-                response.getWriter().println("Book returned successfully!");
+                response.getWriter().println("Book returned successfully for Roll No: " + (roll != null ? roll : "N/A") + "!");
             } else {
                 response.getWriter().println("Book not borrowed or does not exist.");
             }

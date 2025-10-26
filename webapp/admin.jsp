@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="model.Book" %>
+<%@ page import="model.BorrowRecord" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,6 +88,49 @@
             <input type="text" name="id" placeholder="Book ID" required>
             <input type="submit" value="Delete Book">
         </form>
+    </div>
+
+    <div style="height:16px"></div>
+    <div class="panel">
+        <h2 class="heading">Student Borrowed Books</h2>
+        <form action="<%= request.getContextPath() %>/admin/loans" method="get">
+            <div class="row">
+                <input type="text" name="roll" placeholder="Enter Student Roll No" required>
+                <input type="submit" value="Search">
+            </div>
+        </form>
+        <%
+            java.util.List<BorrowRecord> loans = (java.util.List<BorrowRecord>) request.getAttribute("loans");
+            String roll = (String) request.getAttribute("roll");
+            if (loans != null) {
+        %>
+            <div style="height:8px"></div>
+            <p class="subtle">Active loans for <strong><%= roll %></strong></p>
+            <% if (loans.isEmpty()) { %>
+                <p class="subtle">No active loans found.</p>
+            <% } else { %>
+            <table class="table">
+                <tr>
+                    <th>Borrow ID</th>
+                    <th>Book ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Borrow Date</th>
+                    <th>Due Date</th>
+                </tr>
+                <% for (BorrowRecord r : loans) { %>
+                <tr>
+                    <td><%= r.getBorrowId() %></td>
+                    <td><%= r.getBookId() %></td>
+                    <td><%= r.getTitle() %></td>
+                    <td><%= r.getAuthor() %></td>
+                    <td><%= r.getBorrowDate() %></td>
+                    <td><%= r.getDueDate() %></td>
+                </tr>
+                <% } %>
+            </table>
+            <% } %>
+        <% } %>
     </div>
 
     <div style="height:16px"></div>

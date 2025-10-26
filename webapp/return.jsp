@@ -13,8 +13,11 @@
 
     <div class="panel">
         <h1 class="heading">Return a Book</h1>
-        <form action="return" method="post">
-            <input type="text" name="bookId" placeholder="Enter Book ID" required>
+        <form action="<%= request.getContextPath() %>/return" method="post">
+            <div class="row">
+                <input type="text" name="bookId" placeholder="Enter Book ID" required>
+                <input type="text" name="studentRollNo" placeholder="Student Roll No" required>
+            </div>
             <input type="submit" value="Return">
         </form>
     </div>
