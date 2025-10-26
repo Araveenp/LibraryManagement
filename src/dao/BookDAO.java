@@ -131,13 +131,14 @@ public class BookDAO {
 
     public List<Book> searchBooks(String query) {
         List<Book> books = new ArrayList<>();
-    String sql = "SELECT * FROM books WHERE LOWER(title) LIKE ? OR LOWER(author) LIKE ?";
+    String sql = "SELECT * FROM books WHERE LOWER(title) LIKE ? OR LOWER(author) LIKE ? OR LOWER(isbn) LIKE ?";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             String q = query == null ? "" : query.toLowerCase();
             pstmt.setString(1, "%" + q + "%");
             pstmt.setString(2, "%" + q + "%");
+            pstmt.setString(3, "%" + q + "%");
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {

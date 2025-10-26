@@ -18,6 +18,9 @@
                 <input type="text" name="bookId" placeholder="Enter Book ID" required>
                 <input type="text" name="studentRollNo" placeholder="Student Roll No" required>
             </div>
+            <div class="row">
+                <input type="number" name="quantity" min="1" value="1" placeholder="Quantity" required>
+            </div>
             <input type="submit" value="Borrow">
         </form>
     </div>

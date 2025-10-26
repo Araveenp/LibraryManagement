@@ -52,6 +52,7 @@
                                 <form action="<%= request.getContextPath() %>/borrow" method="post" class="inline">
                                     <input type="hidden" name="bookId" value="<%= book.getId() %>" />
                                     <input type="text" name="studentRollNo" placeholder="Student Roll No" required style="width:160px"/>
+                                    <input type="number" name="quantity" min="1" value="1" max="<%= (book.getAvailableCopies()!=null?book.getAvailableCopies(): (book.isAvailable()?1:0)) %>" style="width:90px" />
                                     <button type="submit" class="btn">Borrow</button>
                                 </form>
                             <% } else { %>

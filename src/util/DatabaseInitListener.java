@@ -139,10 +139,12 @@ public class DatabaseInitListener implements ServletContextListener {
             "book_id INT NOT NULL, " +
             "user_id INT NOT NULL, " +
             "student_roll_no VARCHAR(50), " +
+            "quantity INT DEFAULT 1, " +
             "borrow_date DATE NOT NULL, " +
             "due_date DATE NOT NULL, " +
             "return_date DATE)");
         st.executeUpdate("ALTER TABLE borrowed_books ADD COLUMN IF NOT EXISTS student_roll_no VARCHAR(50)");
+        st.executeUpdate("ALTER TABLE borrowed_books ADD COLUMN IF NOT EXISTS quantity INT DEFAULT 1");
             }
         } catch (SQLException e) {
             e.printStackTrace();
