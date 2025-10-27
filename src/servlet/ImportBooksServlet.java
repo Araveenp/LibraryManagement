@@ -23,6 +23,12 @@ import java.util.*;
 @WebServlet("/admin/import")
 public class ImportBooksServlet extends HttpServlet {
     private final Gson gson = new Gson();
+    // Simple in-memory background job tracker (per JVM). For production, persist to DB.
+    private static volatile boolean jobRunning = false;
+    private static volatile int jobTarget = 0;
+    private static volatile int jobInserted = 0;
+    private static volatile String jobSubjects = "";
+    private static volatile String jobStatus = "IDLE";
     private BookDAO bookDAO;
 
     @Override
@@ -39,10 +45,11 @@ public class ImportBooksServlet extends HttpServlet {
             return;
         }
 
-        String subjectsParam = request.getParameter("subjects");
+    String subjectsParam = request.getParameter("subjects");
         String countParam = request.getParameter("count");
+    String asyncParam = request.getParameter("async");
     int target = 1000;
-    try { if (countParam != null) target = Math.max(50, Math.min(300, Integer.parseInt(countParam.trim()))); } catch (NumberFormatException ignore) {}
+    try { if (countParam != null) target = Math.max(50, Math.min(50000, Integer.parseInt(countParam.trim()))); } catch (NumberFormatException ignore) {}
 
         List<String> subjects = new ArrayList<>();
         if (subjectsParam != null && !subjectsParam.trim().isEmpty()) {
@@ -55,25 +62,83 @@ public class ImportBooksServlet extends HttpServlet {
             subjects = Arrays.asList("fiction", "fantasy", "science", "engineering", "medicine", "history", "business", "technology");
         }
 
-        int perSubject = Math.max(25, target / subjects.size());
+        boolean async = "true".equalsIgnoreCase(asyncParam) || "1".equals(asyncParam);
+        if (async) {
+            if (jobRunning) {
+                request.setAttribute("message", "An import job is already running: " + jobInserted + "/" + jobTarget + " inserted for subjects: " + jobSubjects);
+                request.getRequestDispatcher("/admin.jsp").forward(request, response);
+                return;
+            }
+            final List<String> subjCopy = new ArrayList<>(subjects);
+            jobRunning = true;
+            jobTarget = target;
+            jobInserted = 0;
+            jobSubjects = String.join(", ", subjCopy);
+            jobStatus = "RUNNING";
+            new Thread(() -> {
+                try {
+                    runImportBatches(subjCopy, target);
+                    jobStatus = "DONE";
+                } catch (Exception e) {
+                    jobStatus = "ERROR: " + e.getMessage();
+                } finally {
+                    jobRunning = false;
+                }
+            }, "ImportBooksJob").start();
+            request.setAttribute("message", "Background import started for subjects: " + jobSubjects + ". Target: " + jobTarget + ". Check status below.");
+            request.getRequestDispatcher("/admin.jsp").forward(request, response);
+        } else {
+            int perSubject = Math.max(25, Math.max(1, target / subjects.size()));
+            Set<String> seen = new HashSet<>();
+            int inserted = 0;
+            StringBuilder errors = new StringBuilder();
+
+            for (String subj : subjects) {
+                if (inserted >= target) break;
+                int remaining = target - inserted;
+                int toFetch = Math.min(perSubject, remaining);
+
+                try {
+                    inserted += importSubject(subj, toFetch, seen);
+                } catch (Exception e) {
+                    errors.append("Subject '").append(subj).append("' failed: ").append(e.getMessage()).append("\n");
+                }
+            }
+
+            request.setAttribute("message", "Imported " + inserted + " real books. " + (errors.length() > 0 ? ("Some errors occurred: " + errors) : ""));
+            request.getRequestDispatcher("/admin.jsp").forward(request, response);
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if ("status".equalsIgnoreCase(action)) {
+            response.setContentType("text/plain;charset=UTF-8");
+            response.getWriter().println("status=" + jobStatus);
+            response.getWriter().println("running=" + jobRunning);
+            response.getWriter().println("inserted=" + jobInserted);
+            response.getWriter().println("target=" + jobTarget);
+            response.getWriter().println("subjects=" + jobSubjects);
+            return;
+        }
+        super.doGet(request, response);
+    }
+
+    private void runImportBatches(List<String> subjects, int target) throws IOException {
+        int batchSize = 250; // per iteration
         Set<String> seen = new HashSet<>();
-        int inserted = 0;
-        StringBuilder errors = new StringBuilder();
-
-        for (String subj : subjects) {
-            if (inserted >= target) break;
-            int remaining = target - inserted;
-            int toFetch = Math.min(perSubject, remaining);
-
-            try {
-                inserted += importSubject(subj, toFetch, seen);
-            } catch (Exception e) {
-                errors.append("Subject '").append(subj).append("' failed: ").append(e.getMessage()).append("\n");
+        while (jobInserted < target && jobRunning) {
+            int remaining = target - jobInserted;
+            int perSubject = Math.max(25, Math.max(1, remaining / subjects.size()));
+            for (String subj : subjects) {
+                if (jobInserted >= target || !jobRunning) break;
+                int toFetch = Math.min(perSubject, target - jobInserted);
+                int got = importSubject(subj, toFetch, seen);
+                jobInserted += got;
+                try { Thread.sleep(400); } catch (InterruptedException ignore) {}
             }
         }
-
-        request.setAttribute("message", "Imported " + inserted + " real books. " + (errors.length() > 0 ? ("Some errors occurred: " + errors) : ""));
-        request.getRequestDispatcher("/admin.jsp").forward(request, response);
     }
 
     private int importSubject(String subject, int desired, Set<String> seen) throws IOException {
@@ -109,15 +174,34 @@ public class ImportBooksServlet extends HttpServlet {
                 Integer year = optInt(d, "first_publish_year");
                 String coverUrl = coverFromDoc(d);
 
-                Book b = new Book(0, title, author, isbn, capitalize(subject), publisher, year, null,
-                        null, coverUrl, "Shelf OL", 10, 10, true);
-                bookDAO.addBook(b);
+        // Skip if an exact title+author already exists
+        if (existsByTitleAuthor(title, author)) {
+            continue;
+        }
+        Book b = new Book(0, title, author, isbn, capitalize(subject), publisher, year, null,
+            null, coverUrl, "Shelf OL", 10, 10, true);
+        bookDAO.addBook(b);
                 seen.add(key);
                 inserted++;
             }
             page++;
         }
         return inserted;
+    }
+
+    private boolean existsByTitleAuthor(String title, String author) {
+        String sql = "SELECT 1 FROM books WHERE LOWER(title)=? AND (LOWER(author)=? OR (author IS NULL AND ? IS NULL)) LIMIT 1";
+        try (java.sql.Connection conn = util.DBConnection.getConnection();
+             java.sql.PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, title == null ? null : title.toLowerCase());
+            ps.setString(2, author == null ? null : author.toLowerCase());
+            ps.setString(3, author == null ? null : author.toLowerCase());
+            try (java.sql.ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     private JsonObject getJson(String urlStr) throws IOException {

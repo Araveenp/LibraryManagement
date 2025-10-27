@@ -24,10 +24,11 @@ public class AdminLoansServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Only require login; no separate admin role in this app setup
         HttpSession session = request.getSession(false);
         User user = (session != null) ? (User) session.getAttribute("user") : null;
-        if (user == null || user.getRole() == null || !"admin".equals(user.getRole())) {
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, "Admin access required");
+        if (user == null) {
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
             return;
         }
         String roll = request.getParameter("roll");

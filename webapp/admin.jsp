@@ -33,6 +33,10 @@
                 <input type="number" name="count" min="50" max="2000" value="1000" />
                 <span class="subtle" style="margin-left:8px">Approximate total to import</span>
             </div>
+            <div class="row">
+                <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" name="async" value="true" /> Run in background (for large imports)</label>
+                <a class="btn" style="margin-left:auto" href="<%= request.getContextPath() %>/admin/import?action=status" target="_blank">View Import Status</a>
+            </div>
             <input type="submit" value="Import Real Books" />
         </form>
 
