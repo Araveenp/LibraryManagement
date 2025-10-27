@@ -17,7 +17,7 @@
     <div class="panel">
         <h1 class="heading">Search for Books</h1>
         <form action="<%= request.getContextPath() %>/search" method="get">
-            <input type="text" name="query" placeholder="Enter title or author" />
+            <input type="text" name="query" placeholder="Enter title or author (ISBN also supported)" />
             <input type="submit" value="Search" />
         </form>
 
@@ -29,7 +29,17 @@
         %>
             <div style="height:12px"></div>
             <p class="subtle">
-                <%= (q != null && !q.trim().isEmpty()) ? ("Results for '" + q + "'") : "" %>
+                <%
+                    if (q != null && !q.trim().isEmpty()) {
+                %>
+                    Results for '<%= q %>'
+                <%
+                    } else if (featured != null && featured) {
+                %>
+                    Featured books
+                <%
+                    }
+                %>
             </p>
             <table class="table">
                 <tr>

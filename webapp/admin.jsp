@@ -23,7 +23,7 @@
             <div class="alert ok"><%= message %></div>
         <% } %>
 
-        <h3 class="subtle">Add a New Book</h3>
+    <h3 class="subtle" id="add">Add a New Book</h3>
         <form action="admin" method="post">
             <input type="hidden" name="action" value="add">
             <div class="row">
@@ -49,7 +49,7 @@
 
         <div style="height:16px"></div>
 
-        <h3 class="subtle">Update a Book</h3>
+    <h3 class="subtle" id="update">Update a Book</h3>
         <form action="admin" method="post">
             <input type="hidden" name="action" value="update">
             <div class="row">
@@ -82,7 +82,7 @@
 
         <div style="height:16px"></div>
 
-        <h3 class="subtle">Delete a Book</h3>
+    <h3 class="subtle" id="delete">Delete a Book</h3>
         <form action="admin" method="post">
             <input type="hidden" name="action" value="delete">
             <input type="text" name="id" placeholder="Book ID" required>

@@ -28,8 +28,11 @@ public class SearchBookServlet extends HttpServlet {
             request.setAttribute("featured", false);
             request.setAttribute("q", query);
         } else {
-            request.setAttribute("books", null);
-            request.setAttribute("featured", false);
+            // Show some random featured books when there's no query
+            List<Book> featuredBooks = bookDAO.getRandomBooks(12);
+            request.setAttribute("books", featuredBooks);
+            request.setAttribute("featured", true);
+            request.setAttribute("q", null);
         }
         request.getRequestDispatcher("search.jsp").forward(request, response);
     }

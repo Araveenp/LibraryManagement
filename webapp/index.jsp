@@ -48,11 +48,26 @@
             </div>
         </div>
 
-        <%
-            if (user != null && "admin".equals(user.getRole())) {
-        %>
-            <p><a href="admin.jsp">Go to Admin Panel</a></p>
-        <% } %>
+        <div class="panel" style="margin-top:16px">
+            <h2 class="heading">Admin quick actions</h2>
+            <div class="features">
+                <div class="card">
+                    <h3>Admin Panel</h3>
+                    <p>Full access to manage books and settings.</p>
+                    <a class="btn" href="<%= request.getContextPath() %>/admin.jsp">Open Admin</a>
+                </div>
+                <div class="card">
+                    <h3>Loans</h3>
+                    <p>Search active loans by student roll number.</p>
+                    <a class="btn" href="<%= request.getContextPath() %>/admin/loans">Manage Loans</a>
+                </div>
+                <div class="card">
+                    <h3>Add Book</h3>
+                    <p>Quickly add a new title to the library.</p>
+                    <a class="btn" href="<%= request.getContextPath() %>/admin.jsp#add">Add New</a>
+                </div>
+            </div>
+        </div>
     </div>
 
         <%@ include file="/WEB-INF/includes/footer.jspf" %>
