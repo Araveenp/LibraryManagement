@@ -56,7 +56,7 @@ public class DatabaseInitListener implements ServletContextListener {
                 }
 
                 if (count == 0) {
-                    // If a CSV file exists at repo root, import it first
+                    // If a CSV file exists at repo root, import it.
                     Path csvPath = Paths.get("books.csv");
                     if (Files.exists(csvPath)) {
                         String header = "title,author,isbn,genre,publisher,published_year,pages,description,cover_url,location,available";
@@ -66,56 +66,8 @@ public class DatabaseInitListener implements ServletContextListener {
                         try {
                             st.executeUpdate(csvInsert);
                         } catch (SQLException ignore) {
-                            // If CSVREAD fails (e.g., path issues), continue with programmatic seed
+                            // CSVREAD failed; continue without synthetic fallback to keep data real-only
                         }
-                    }
-
-            // Top up with 1000 auto-generated diverse books
-                    try (PreparedStatement ps = conn.prepareStatement(
-                "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, total_copies, available_copies, available) " +
-                    "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)")) {
-                        String[] genres = new String[]{"Engineering","Medicine","Story","Action","Fantasy","Technology","Computer Science","History","Psychology","Business"};
-                        String[] publishers = new String[]{"Helix House","CodeCraft","GreenLeaf","Sunfire","Addison-Wesley","Prentice Hall","North Star","Gridline","Mindframe","Founders Press"};
-                        String[] shelves = new String[]{"A","B","C","D","E","F","G","H","I","J"};
-                        int baseYear = 1995;
-                        long baseIsbn = 9781000000000L;
-
-                        for (int i = 1; i <= 1000; i++) {
-                            String genre = genres[i % genres.length];
-                            String title = makeTitle(genre, i);
-                            String author = "Author " + genre.charAt(0) + " " + i;
-                            String publisher = publishers[(i * 3) % publishers.length];
-                            int year = baseYear + (i % 30);
-                            int pages = 160 + (i * 7 % 540);
-                            String description = "Auto-seeded " + genre.toLowerCase(Locale.ROOT) + " volume " + i;
-                            String coverUrl = "https://example.com/covers/" + slug(title) + ".jpg";
-                            String location = "Shelf " + shelves[i % shelves.length] + ((i % 6) + 1);
-                            int totalCopies = 5 + (i % 16); // 5..20
-                            int availableCopies = (i % 4 == 0) ? 0 : Math.max(0, (totalCopies - (i % (totalCopies))));
-                            boolean available = availableCopies > 0;
-                            String isbn = String.valueOf(baseIsbn + i);
-
-                            int idx = 1;
-                            ps.setString(idx++, title);
-                            ps.setString(idx++, author);
-                            ps.setString(idx++, isbn);
-                            ps.setString(idx++, genre);
-                            ps.setString(idx++, publisher);
-                            ps.setInt(idx++, year);
-                            ps.setInt(idx++, pages);
-                            ps.setString(idx++, description);
-                            ps.setString(idx++, coverUrl);
-                            ps.setString(idx++, location);
-                            ps.setInt(idx++, totalCopies);
-                            ps.setInt(idx++, availableCopies);
-                            ps.setBoolean(idx++, available);
-                            ps.addBatch();
-
-                            if (i % 200 == 0) {
-                                ps.executeBatch();
-                            }
-                        }
-                        ps.executeBatch();
                     }
                 }
                 st.executeUpdate("ALTER TABLE books ADD COLUMN IF NOT EXISTS location VARCHAR(100)");

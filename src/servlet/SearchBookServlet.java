@@ -28,11 +28,19 @@ public class SearchBookServlet extends HttpServlet {
             request.setAttribute("featured", false);
             request.setAttribute("q", query);
         } else {
-            // Show some random featured books when there's no query
-            List<Book> featuredBooks = bookDAO.getRandomBooks(12);
+            // Show some random featured books when there's no query; allow optional 'limit' param
+            int limit = 12;
+            String limitStr = request.getParameter("limit");
+            try {
+                if (limitStr != null) {
+                    limit = Math.max(4, Math.min(36, Integer.parseInt(limitStr)));
+                }
+            } catch (NumberFormatException ignore) {}
+            List<Book> featuredBooks = bookDAO.getRandomBooks(limit);
             request.setAttribute("books", featuredBooks);
             request.setAttribute("featured", true);
             request.setAttribute("q", null);
+            request.setAttribute("limit", limit);
         }
         request.getRequestDispatcher("search.jsp").forward(request, response);
     }
