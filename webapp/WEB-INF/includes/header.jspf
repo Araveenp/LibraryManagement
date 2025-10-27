@@ -7,7 +7,7 @@
     <a href="<%= request.getContextPath() %>/borrow.jsp">Borrow</a>
     <a href="<%= request.getContextPath() %>/return.jsp">Return</a>
     <a href="<%= request.getContextPath() %>/renew.jsp">Renew</a>
-    <a href="<%= request.getContextPath() %>/admin.jsp">Admin</a>
+  <a href="<%= request.getContextPath() %>/admin">Admin</a>
     <a href="<%= request.getContextPath() %>/admin/loans">Loans</a>
   </div>
   <div class="auth">

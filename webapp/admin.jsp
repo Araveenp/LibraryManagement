@@ -41,7 +41,7 @@
         </form>
 
     <h3 class="subtle" id="add">Add a New Book</h3>
-        <form action="admin" method="post">
+    <form action="<%= request.getContextPath() %>/admin" method="post">
             <input type="hidden" name="action" value="add">
             <div class="row">
                 <input type="text" name="title" placeholder="Title" required>
@@ -67,7 +67,7 @@
         <div style="height:16px"></div>
 
     <h3 class="subtle" id="update">Update a Book</h3>
-        <form action="admin" method="post">
+    <form action="<%= request.getContextPath() %>/admin" method="post">
             <input type="hidden" name="action" value="update">
             <div class="row">
                 <input type="text" name="id" placeholder="Book ID" required>
@@ -100,7 +100,7 @@
         <div style="height:16px"></div>
 
     <h3 class="subtle" id="delete">Delete a Book</h3>
-        <form action="admin" method="post">
+    <form action="<%= request.getContextPath() %>/admin" method="post">
             <input type="hidden" name="action" value="delete">
             <input type="text" name="id" placeholder="Book ID" required>
             <input type="submit" value="Delete Book">
@@ -195,7 +195,7 @@
                         <td><%= b.getGenre() == null ? "" : b.getGenre() %></td>
                         <td><%= b.isAvailable() %></td>
                         <td>
-                            <form action="admin" method="post" style="display:inline">
+                            <form action="<%= request.getContextPath() %>/admin" method="post" style="display:inline">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id" value="<%= b.getId() %>">
                                 <input type="submit" value="Delete Permanently">
