@@ -41,8 +41,8 @@ public class ImportBooksServlet extends HttpServlet {
 
         String subjectsParam = request.getParameter("subjects");
         String countParam = request.getParameter("count");
-        int target = 1000;
-        try { if (countParam != null) target = Math.max(50, Math.min(2000, Integer.parseInt(countParam.trim()))); } catch (NumberFormatException ignore) {}
+    int target = 1000;
+    try { if (countParam != null) target = Math.max(50, Math.min(300, Integer.parseInt(countParam.trim()))); } catch (NumberFormatException ignore) {}
 
         List<String> subjects = new ArrayList<>();
         if (subjectsParam != null && !subjectsParam.trim().isEmpty()) {

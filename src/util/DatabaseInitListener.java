@@ -3,6 +3,8 @@ package util;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import java.io.InputStream;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -56,17 +58,34 @@ public class DatabaseInitListener implements ServletContextListener {
                 }
 
                 if (count == 0) {
-                    // If a CSV file exists at repo root, import it.
-                    Path csvPath = Paths.get("books.csv");
-                    if (Files.exists(csvPath)) {
-                        String header = "title,author,isbn,genre,publisher,published_year,pages,description,cover_url,location,available";
-                        String csvInsert = "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) " +
-                                "SELECT title, author, isbn, genre, publisher, CAST(published_year AS INT), CAST(pages AS INT), description, cover_url, location, " +
-                                "CASE WHEN LOWER(available)='true' THEN TRUE ELSE FALSE END FROM CSVREAD('" + csvPath.toString().replace("\\", "/") + "', '" + header + "')";
-                        try {
-                            st.executeUpdate(csvInsert);
-                        } catch (SQLException ignore) {
-                            // CSVREAD failed; continue without synthetic fallback to keep data real-only
+                    // Try to load CSV packaged in the WAR under /WEB-INF/books.csv first
+                    String header = "title,author,isbn,genre,publisher,published_year,pages,description,cover_url,location,available";
+                    boolean imported = false;
+                    try {
+                        InputStream is = sce.getServletContext().getResourceAsStream("/WEB-INF/books.csv");
+                        if (is != null) {
+                            File tmp = File.createTempFile("books", ".csv");
+                            java.nio.file.Files.copy(is, tmp.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+                            String csvInsertWar = "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) " +
+                                    "SELECT title, author, isbn, genre, publisher, CAST(published_year AS INT), CAST(pages AS INT), description, cover_url, location, " +
+                                    "CASE WHEN LOWER(available)='true' THEN TRUE ELSE FALSE END FROM CSVREAD('" + tmp.getAbsolutePath().replace("\\", "/") + "', '" + header + "')";
+                            st.executeUpdate(csvInsertWar);
+                            imported = true;
+                        }
+                    } catch (Exception ignore) { }
+
+                    // Fallback to filesystem root path for local development
+                    if (!imported) {
+                        Path csvPath = Paths.get("books.csv");
+                        if (Files.exists(csvPath)) {
+                            String csvInsert = "INSERT INTO books (title, author, isbn, genre, publisher, published_year, pages, description, cover_url, location, available) " +
+                                    "SELECT title, author, isbn, genre, publisher, CAST(published_year AS INT), CAST(pages AS INT), description, cover_url, location, " +
+                                    "CASE WHEN LOWER(available)='true' THEN TRUE ELSE FALSE END FROM CSVREAD('" + csvPath.toString().replace("\\", "/") + "', '" + header + "')";
+                            try {
+                                st.executeUpdate(csvInsert);
+                            } catch (SQLException ignore) {
+                                // ignore
+                            }
                         }
                     }
                 }

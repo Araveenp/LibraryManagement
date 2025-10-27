@@ -1,0 +1,21 @@
+title,author,isbn,genre,publisher,published_year,pages,description,cover_url,location,available
+Galactic Horizons,Aria K. Stone,9780000000001,Science Fiction,Stellar House,2015,384,Exploration of distant worlds,https://example.com/covers/galactic_horizons.jpg,Shelf A1,true
+The Quantum Bridge,Leo Faraday,9780000000002,Science,Nova Press,2018,320,Popular overview of quantum tech,https://example.com/covers/quantum_bridge.jpg,Shelf S1,true
+Mystery at Raven Hill,Clara Doyle,9780000000003,Mystery,Black Lantern,2012,276,Detective unravels a small town secret,https://example.com/covers/raven_hill.jpg,Shelf M2,true
+Whispers of the Forest,Ella Greenwood,9780000000004,Fantasy,Emerald Ink,2017,410,Magic awakens in ancient woods,https://example.com/covers/whispers_forest.jpg,Shelf F3,true
+Culinary Journeys,Maria Rossi,9780000000005,Cookbook,Savory Pages,2020,240,Recipes inspired by travel,https://example.com/covers/culinary_journeys.jpg,Shelf C1,true
+Edge of Algorithms,Neel Batra,9780000000006,Technology,CodeCraft,2021,352,Modern algorithms explained,https://example.com/covers/edge_algorithms.jpg,Shelf T1,true
+The Art of Minimal Living,Hana Kim,9780000000007,Self Help,LightPath,2019,208,Guide to simple intentional life,https://example.com/covers/minimal_living.jpg,Shelf SH1,true
+Finance Made Simple,Jordan Blake,9780000000008,Business,LedgerWorks,2016,288,Personal finance for everyone,https://example.com/covers/finance_simple.jpg,Shelf B1,true
+Running Strong,Peter Novak,9780000000009,Health,Stride House,2014,224,Training for distance runners,https://example.com/covers/running_strong.jpg,Shelf H1,true
+Poems of the Sea,Lina Moreno,9780000000010,Poetry,BlueWave,2011,160,Contemporary ocean themed poems,https://example.com/covers/poems_sea.jpg,Shelf P1,true
+A Brief History of Numbers,Ivan Petrov,9780000000011,Math,NumberLine,2013,300,How numbers shaped civilization,https://example.com/covers/history_numbers.jpg,Shelf MA1,true
+Designing User Experiences,Sofia Alvarez,9780000000012,Design,Canvas Press,2022,344,Practical UX methods and case studies,https://example.com/covers/designing_ux.jpg,Shelf D1,true
+The Startup Playbook,Ryan Patel,9780000000013,Entrepreneurship,Founders Press,2018,296,From idea to product market fit,https://example.com/covers/startup_playbook.jpg,Shelf B2,true
+Rivers and Mountains,Noah Greene,9780000000014,Nature,WildTrail,2010,264,Essays on landscapes and ecology,https://example.com/covers/rivers_mountains.jpg,Shelf N1,true
+Hidden Codes,Amelia Zhou,9780000000015,Thriller,Redline Press,2019,360,Cryptographer on the run,https://example.com/covers/hidden_codes.jpg,Shelf TH1,true
+Hearts in Winter,Grace Bell,9780000000016,Romance,SilverLeaf,2015,312,Love rekindled in a mountain town,https://example.com/covers/hearts_winter.jpg,Shelf R1,true
+The Mindful Leader,Kai Nakamura,9780000000017,Leadership,North Star,2020,280,Mindfulness for effective leadership,https://example.com/covers/mindful_leader.jpg,Shelf B3,true
+City of Brass and Smoke,Adir Khan,9780000000018,Fantasy,Sunfire,2016,448,Adventure in a steampunk city,https://example.com/covers/brass_smoke.jpg,Shelf F4,true
+Data Storytelling,Lauren Chen,9780000000019,Data,Plotline,2021,256,Communicating insights with data,https://example.com/covers/data_storytelling.jpg,Shelf T2,true
+The Silk Road Revisited,Omar Rahman,9780000000020,History,EastWest,2012,336,Trade routes that connected worlds,https://example.com/covers/silk_road.jpg,Shelf HI1,true
