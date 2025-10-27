@@ -3,7 +3,7 @@
   <div class="brand"><a href="<%= request.getContextPath() %>/index.jsp">Library</a></div>
   <div class="links">
     <a href="<%= request.getContextPath() %>/index.jsp">Home</a>
-    <a href="<%= request.getContextPath() %>/search.jsp">Search</a>
+  <a href="<%= request.getContextPath() %>/search">Search</a>
     <a href="<%= request.getContextPath() %>/borrow.jsp">Borrow</a>
     <a href="<%= request.getContextPath() %>/return.jsp">Return</a>
     <a href="<%= request.getContextPath() %>/renew.jsp">Renew</a>

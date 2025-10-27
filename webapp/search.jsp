@@ -41,70 +41,28 @@
                     }
                 %>
             </p>
-            <%
-                if (featured != null && featured) {
-            %>
-                <div class="features">
-                    <% for (Book book : books) { %>
-                        <div class="card">
-                            <% if (book.getCoverUrl() != null && !book.getCoverUrl().trim().isEmpty()) { %>
-                                <img src="<%= book.getCoverUrl() %>" alt="<%= book.getTitle() %>" style="width:100%;height:160px;object-fit:cover;border-radius:8px"/>
-                            <% } %>
-                            <h3 style="margin-top:8px"><%= book.getTitle() %></h3>
-                            <p class="subtle"><%= book.getAuthor() == null ? "" : book.getAuthor() %></p>
-                            <p class="subtle">Available: <strong><%= (book.getAvailableCopies() != null ? book.getAvailableCopies() : (book.isAvailable() ? 1 : 0)) %></strong></p>
-                            <% if (book.isAvailable()) { %>
-                            <form action="<%= request.getContextPath() %>/borrow" method="post">
-                                <input type="hidden" name="bookId" value="<%= book.getId() %>" />
-                                <input type="text" name="studentRollNo" placeholder="Roll No" required style="width:100%;margin-bottom:6px"/>
-                                <input type="number" name="quantity" min="1" value="1" max="<%= (book.getAvailableCopies()!=null?book.getAvailableCopies(): (book.isAvailable()?1:0)) %>" style="width:100%;margin-bottom:6px" />
-                                <button type="submit" class="btn" style="width:100%">Borrow</button>
-                            </form>
-                            <% } else { %>
-                                <span class="subtle">Not available</span>
-                            <% } %>
-                        </div>
-                    <% } %>
-                </div>
-            <%
-                } else {
-            %>
-                <table class="table">
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Available (count)</th>
-                        <th>Actions</th>
-                    </tr>
-                    <%
-                        for (Book book : books) {
-                    %>
-                        <tr>
-                            <td><%= book.getId() %></td>
-                            <td><%= book.getTitle() %></td>
-                            <td><%= book.getAuthor() %></td>
-                            <td><%= (book.getAvailableCopies() != null ? book.getAvailableCopies() : (book.isAvailable() ? 1 : 0)) %></td>
-                            <td>
-                                <% if (book.isAvailable()) { %>
-                                    <form action="<%= request.getContextPath() %>/borrow" method="post" class="inline">
-                                        <input type="hidden" name="bookId" value="<%= book.getId() %>" />
-                                        <input type="text" name="studentRollNo" placeholder="Student Roll No" required style="width:160px"/>
-                                        <input type="number" name="quantity" min="1" value="1" max="<%= (book.getAvailableCopies()!=null?book.getAvailableCopies(): (book.isAvailable()?1:0)) %>" style="width:90px" />
-                                        <button type="submit" class="btn">Borrow</button>
-                                    </form>
-                                <% } else { %>
-                                    <span class="subtle">Not available</span>
-                                <% } %>
-                            </td>
-                        </tr>
-                    <%
-                        }
-                    %>
-                </table>
-            <%
-                }
-            %>
+            <div class="features">
+                <% for (Book book : books) { %>
+                    <div class="card">
+                        <% if (book.getCoverUrl() != null && !book.getCoverUrl().trim().isEmpty()) { %>
+                            <img src="<%= book.getCoverUrl() %>" alt="<%= book.getTitle() %>" style="width:100%;height:160px;object-fit:cover;border-radius:8px"/>
+                        <% } %>
+                        <h3 style="margin-top:8px"><%= book.getTitle() %></h3>
+                        <p class="subtle"><%= book.getAuthor() == null ? "" : book.getAuthor() %></p>
+                        <p class="subtle">Available: <strong><%= (book.getAvailableCopies() != null ? book.getAvailableCopies() : (book.isAvailable() ? 1 : 0)) %></strong></p>
+                        <% if (book.isAvailable()) { %>
+                        <form action="<%= request.getContextPath() %>/borrow" method="post">
+                            <input type="hidden" name="bookId" value="<%= book.getId() %>" />
+                            <input type="text" name="studentRollNo" placeholder="Roll No" required style="width:100%;margin-bottom:6px"/>
+                            <input type="number" name="quantity" min="1" value="1" max="<%= (book.getAvailableCopies()!=null?book.getAvailableCopies(): (book.isAvailable()?1:0)) %>" style="width:100%;margin-bottom:6px" />
+                            <button type="submit" class="btn" style="width:100%">Borrow</button>
+                        </form>
+                        <% } else { %>
+                            <span class="subtle">Not available</span>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
         <%
             }
         %>

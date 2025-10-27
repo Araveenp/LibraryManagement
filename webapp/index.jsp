@@ -29,7 +29,7 @@
             <div class="card">
                 <h3>Search</h3>
                 <p>Find books by title or author.</p>
-                <a class="btn" href="<%= request.getContextPath() %>/search.jsp">Open Search</a>
+                <a class="btn" href="<%= request.getContextPath() %>/search">Open Search</a>
             </div>
             <div class="card">
                 <h3>Borrow</h3>
