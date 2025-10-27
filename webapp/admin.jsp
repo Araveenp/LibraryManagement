@@ -23,6 +23,19 @@
             <div class="alert ok"><%= message %></div>
         <% } %>
 
+        <h3 class="subtle">Import Real Books</h3>
+        <form action="<%= request.getContextPath() %>/admin/import" method="post">
+            <div class="row">
+                <input type="text" name="subjects" placeholder="Subjects (comma-separated)"
+                       value="fiction, fantasy, science, engineering, medicine, history, business, technology" style="flex:1">
+            </div>
+            <div class="row">
+                <input type="number" name="count" min="50" max="2000" value="1000" />
+                <span class="subtle" style="margin-left:8px">Approximate total to import</span>
+            </div>
+            <input type="submit" value="Import Real Books" />
+        </form>
+
     <h3 class="subtle" id="add">Add a New Book</h3>
         <form action="admin" method="post">
             <input type="hidden" name="action" value="add">
