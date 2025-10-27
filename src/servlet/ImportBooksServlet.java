@@ -75,9 +75,10 @@ public class ImportBooksServlet extends HttpServlet {
             jobInserted = 0;
             jobSubjects = String.join(", ", subjCopy);
             jobStatus = "RUNNING";
+            final int targetFinal = target; // ensure effectively-final for lambda capture
             new Thread(() -> {
                 try {
-                    runImportBatches(subjCopy, target);
+                    runImportBatches(subjCopy, targetFinal);
                     jobStatus = "DONE";
                 } catch (Exception e) {
                     jobStatus = "ERROR: " + e.getMessage();
