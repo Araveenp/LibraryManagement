@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Borrow a Book</title>
         <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/styles.css" />
-</head>
+</head>  
 <body>
 <div class="container">
         <%@ include file="/WEB-INF/includes/header.jspf" %>
